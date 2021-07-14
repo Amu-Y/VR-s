@@ -1,1 +1,24 @@
+<main>
 <h1>hello</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ルーム名</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @rooms.each do |room| %>
+    <tr>
+      <td><%= link_to room.name, room_path(room.id) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= form_with model: [@room], local:true do |f| %>
+<%= f.text_field :name, placeholder: "タイトル" %>
+<%= f.submit '新規登録', class: "btn btn-success" %>
+<% end %>
+
+</main>

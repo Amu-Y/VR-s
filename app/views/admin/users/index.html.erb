@@ -1,0 +1,43 @@
+<main>
+<div class="bacimage">
+  <div class="title-box">
+    <p id="notice"></p>
+    <div class="container">
+      <div class="title-box">
+        <h4 class="title-text">会員一覧</h4>
+      </div>
+
+      <div class="btnripple">
+        <div class="date">
+          <table class="table table-striped shadow p-3 mb-5 bg-white rounded">
+            <thead>
+              <tr>
+                <th>会員ID</th>
+                <th>氏名</th>
+                <th>メールアドレス</th>
+                <th>ステータス</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @users.each do |user| %>
+              <tr>
+                <td><%= user.id %></td>
+                <td><%= user.name %></td>
+                <td><%= user.email %></td>
+              <td>
+              <% if user.user_status == true %>
+                <span class="text-success">有効</span>
+              <% else %>
+                <span class="text-secondary">退会済</span>
+              <% end %>
+              </td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>

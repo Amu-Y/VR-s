@@ -1,34 +1,130 @@
 <nav class="menu">
+  <% if user_signed_in? %>
   <div class="menu__icon">
     <ul>
       <li class="menu__icon_list">
-        <a class="menu__icon_link" title="Home" href="#">
+        <a class="menu__icon_link" title="ほーむ">
           <i class="fas fa-home "></i></a></li>
       <li class="menu__icon_list">
-        <a class="menu__icon_link" href="About">
+        <a class="menu__icon_link">
           <i class="fas fa-globe-americas"></i></a></li>
       <li class="menu__icon_list">
-        <a class="menu__icon_link" href="About">
+        <a class="menu__icon_link">
           <i class="fas fa-user"></i></a></li>
       <li class="menu__icon_list">
-        <a class="menu__icon_link" href="#">
+        <a class="menu__icon_link">
+          <i class="fas fa-sign-out-alt"></i></a></li>
+      <li class="menu__icon_list">
+        <a class="menu__icon_link">
           <i class="far fa-sticky-note"></i></a></li>
       <li class="menu__icon_list">
-        <a class="menu__icon_link" href="#">
+        <a class="menu__icon_link">
           <i class="fas fa-bullhorn"></i></a></li>
     </ul>
   </div>
   <div class="menu__text">
     <ul>
       <li class="menu__text_list">
-        <a class="menu__text_link" title="Home" href="#">
-          Home</a></li>
+        <%= link_to "Home", root_path, class: "menu__text_link" %>
+        </li>
+      <li class="menu__text_list">
+        <%= link_to "About", about_path, class: "menu__text_link" %>
+        </li>
+      <li class="menu__text_list">
+        <%= link_to "My page", user_path(current_user), class: "menu__text_link"  %>
+        </li>
+      <li class="menu__text_list">
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "menu__text_link"  %>
+        </li>
       <li class="menu__text_list">
         <a class="menu__text_link" href="#" >
-          Admin</a></li>
+          Information</a></li>
       <li class="menu__text_list">
         <a class="menu__text_link" href="#" >
-          My page</a></li>
+          Help</a></li>
+  </div>
+  <% elsif admin_signed_in? %>
+    <div class="menu__icon">
+    <ul>
+      <li class="menu__icon_list">
+        <a class="menu__icon_link" title="ほーむ">
+          <i class="fas fa-home "></i></a></li>
+      <li class="menu__icon_list">
+        <a class="menu__icon_link">
+          <i class="fas fa-globe-americas"></i></a></li>
+      <li class="menu__icon_list">
+        <a class="menu__icon_link">
+          <i class="fas fa-user"></i></a></li>
+      <li class="menu__icon_list">
+        <a class="menu__icon_link">
+          <i class="fas fa-sign-out-alt"></i></a></li>
+      <li class="menu__icon_list">
+        <a class="menu__icon_link">
+          <i class="far fa-sticky-note"></i></a></li>
+      <li class="menu__icon_list">
+        <a class="menu__icon_link">
+          <i class="fas fa-bullhorn"></i></a></li>
+    </ul>
+  </div>
+  <div class="menu__text">
+    <ul>
+      <li class="menu__text_list">
+        <%= link_to "User", admin_users_path, class: "menu__text_link" %>
+        </li>
+      <li class="menu__text_list">
+        <%= link_to "Room", admin_rooms_path, class: "menu__text_link" %>
+        </li>
+      <li class="menu__text_list">
+        <%= link_to "My page", user_path(current_user), class: "menu__text_link"  %>
+        </li>
+      <li class="menu__text_list">
+        <%= link_to "Logout", destroy_admin_session_path, method: :delete, class: "menu__text_link"  %>
+        </li>
+      <li class="menu__text_list">
+        <a class="menu__text_link" href="#" >
+          Information</a></li>
+      <li class="menu__text_list">
+        <a class="menu__text_link" href="#" >
+          Help</a></li>
+  </div>
+  <% else %>
+  <!--未ログイン-->
+  <div class="menu__icon">
+    <ul>
+      <li class="menu__icon_list">
+        <a class="menu__icon_link">
+          <i class="fas fa-home "></i></a></li>
+      <li class="menu__icon_list">
+        <a class="menu__icon_link">
+          <i class="fas fa-globe-americas"></i></a></li>
+      <li class="menu__icon_list">
+        <a class="menu__icon_link">
+          <i class="fas fa-user"></i></a></li>
+      <li class="menu__icon_list">
+        <a class="menu__icon_link">
+          <i class="fas fa-sign-in-alt"></i></a></li>
+      <li class="menu__icon_list">
+        <a class="menu__icon_link">
+          <i class="far fa-sticky-note"></i></a></li>
+      <li class="menu__icon_list">
+        <a class="menu__icon_link">
+          <i class="fas fa-bullhorn"></i></a></li>
+    </ul>
+  </div>
+  <div  class="menu__text">
+    <ul>
+      <li class="menu__text_list">
+        <%= link_to "Home", root_path, class: "menu__text_link" %>
+        </li>
+      <li class="menu__text_list">
+        <%= link_to "About", about_path, class: "menu__text_link" %>
+        </li>
+      <li class="menu__text_list">
+        <%= link_to "sign up", new_user_registration_path(current_user), class: "menu__text_link" %>
+        </li>
+      <li class="menu__text_list">
+        <%= link_to "Login", new_user_session_path, class: "menu__text_link" %>
+        </li>
       <li class="menu__text_list">
         <a class="menu__text_link" href="#" >
           Information</a></li>
@@ -37,16 +133,16 @@
           Help</a></li>
     </ul>
   </div>
-    <div class="menu__info">
-      <div class="menu__info_logo">
-        VR's</div>
-      <div class="menu__info_name">
-        Co. AMU</div>
-      <div class="menu__info_quote">
-        WHAT WE DO IS WHO WE ARE</div>
-      <div class="menu__info_social">
-        <a class="menu__info_link"href="https://github.com/Amu-Y/VR-s">
-          <i class="fab fa-github"></i></a>
-    </div>
+  <% end %>
+  <div class="menu__info">
+    <div class="menu__info_logo">
+      VR's</div>
+    <div class="menu__info_name">
+      Co. AMU</div>
+    <div class="menu__info_quote">
+      WHAT WE DO IS WHO WE ARE</div>
+    <div class="menu__info_social">
+      <a class="menu__info_link"href="https://github.com/Amu-Y/VR-s">
+        <i class="fab fa-github"></i></a>
   </div>
 </nav>

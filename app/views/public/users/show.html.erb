@@ -1,0 +1,14 @@
+<main>
+<% unless @user.id == current_user.id %>
+  <% if @isRoom == true %>
+    <a href="/room/<% @roomId %>">チャットへ</a>
+  <% else %>
+    <%= form_for @room do |f| %>
+      <%= fields_for @entry do |e| %>
+        <div><%= e.hidden_field :user_id, value: @user.id %></div>
+        <div><%= f.submit "声を掛ける" %></div>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>
+</main>
