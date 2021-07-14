@@ -1,3 +1,31 @@
 // Place all the styles related to the public::homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.contents {
+  position: relative;
+  top: -310px;
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+}
+
+.contents::before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  left: -10%;
+  width: 120%;
+  height: 100%;
+  background: #1D6BDE;
+  transform-origin: left center;
+  transform: rotate(5deg);
+  z-index: -1;
+}
+
+.contents_inner {
+  width: 60%;
+  margin: 0 auto;
+  padding: 350px 10px 120px;
+  color: #fff;
+  text-align: center;
+}
