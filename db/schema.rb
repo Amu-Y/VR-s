@@ -25,15 +25,6 @@ ActiveRecord::Schema.define(version: 2021_07_10_012843) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
-  create_table "entries", force: :cascade do |t|
-    t.integer "room_id"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["room_id"], name: "index_entries_on_room_id"
-    t.index ["user_id"], name: "index_entries_on_user_id"
-  end
-
   create_table "favorites", force: :cascade do |t|
     t.integer "user_id"
     t.integer "message_id"
@@ -59,18 +50,11 @@ ActiveRecord::Schema.define(version: 2021_07_10_012843) do
     t.integer "user_id"
     t.integer "room_id"
     t.string "body"
-    t.string "image"
+    t.string "image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["room_id"], name: "index_messages_on_room_id"
     t.index ["user_id"], name: "index_messages_on_user_id"
-  end
-
-  create_table "news", force: :cascade do |t|
-    t.string "name"
-    t.string "link"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "notifications", force: :cascade do |t|
@@ -108,7 +92,6 @@ ActiveRecord::Schema.define(version: 2021_07_10_012843) do
     t.string "introduction"
     t.string "icon_id"
     t.boolean "user_status", default: true
-    t.integer "entry_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
