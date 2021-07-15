@@ -34,7 +34,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
 
       t.string :name
       t.string :introduction
-      t.string :icon
+      t.string :icon_id
       t.boolean :user_status, default: true
       t.integer :entry_id
 

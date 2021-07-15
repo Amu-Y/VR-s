@@ -106,7 +106,7 @@ ActiveRecord::Schema.define(version: 2021_07_10_012843) do
     t.datetime "remember_created_at"
     t.string "name"
     t.string "introduction"
-    t.string "icon"
+    t.string "icon_id"
     t.boolean "user_status", default: true
     t.integer "entry_id"
     t.datetime "created_at", null: false

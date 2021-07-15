@@ -5,7 +5,11 @@
         <div class="chat-box">
           <div class="chat-face">
           </div>
-          <div class="chat-hukidashi"> <strong><%= m.body %></strong> <br>
+          <div class="chat-hukidashi">
+            <%= link_to attachment_image_tag(m.user, :icon, :fill, 60, 60, fallback: "no_image.jpg"), user_path(m.user) %>
+            <%= m.user.name %>
+             <strong><%= m.body %></strong> <br>
+             <br><%= attachment_image_tag m, :image, format: 'jpeg', size: "700x500" %></br>
           </div>
         </div>
       <% end %>
@@ -13,7 +17,8 @@
 
     <%= form_with model: @message, local: true do |f| %>
       <%= f.text_field :body, placeholder: "メッセージを入力して下さい" , size: 70, class:"form-text-field" %>
-        <%= f.hidden_field :room_id, value: @room.id %>
-          <%= f.submit "投稿",class: 'form-submit'%>
+      <%= f.attachment_field :image %>
+      <%= f.hidden_field :room_id, value: @room.id %>
+      <%= f.submit "投稿",class: 'form-submit'%>
     <% end %>
     </main>

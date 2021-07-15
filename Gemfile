@@ -73,7 +73,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   gem 'omniauth-google-oauth2'#, '~> 1.0'
 
 # 投稿機能
-  gem 'refile'
+  gem "refile", require: "refile/rails", github: 'manfe/refile'
+  gem "refile-mini_magick"
   gem 'rinku'#, '~> 2.0', '>= 2.0.6'
 
 #検索機能
