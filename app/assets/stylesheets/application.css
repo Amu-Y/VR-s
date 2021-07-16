@@ -27,3 +27,14 @@ main {
   background: #1D6BDE;
   
 }
+
+.all__inner {
+  width: 70%;
+  margin: 0 auto;
+  padding: 50px 10px 120px;
+}
+
+.all__inner_text {
+  text-align: center;
+  color: #fff;
+}
