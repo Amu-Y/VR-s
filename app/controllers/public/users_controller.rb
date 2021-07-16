@@ -9,7 +9,6 @@ class Public::UsersController < ApplicationController
   def show
     @myself = current_user
     @user = User.find(params[:id])
-
   end
   
   def edit

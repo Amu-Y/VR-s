@@ -66,7 +66,7 @@
                 <td>
                   <p class="contents__inner_text">
                     選ばれし民にしか許されぬVRコンテンツの総称。</br>
-                    そもそもプレイできる人いるの？私はかれこれVR歴５年になります</br>
+                    <span>そもそもプレイできる人いるの？</span>私はかれこれVR歴５年になります</br>
                     が、未だ出来るようになる気がしません。びっくりするくらい酔い</br>
                     ます。でも面白そうなコンテツは色々あってついポチりそうになり</br>
                     ますが、無理なものは無理、無理過ぎです。なので私はコンテンツ</br>
@@ -107,10 +107,10 @@
         <% @rooms.each do |room| %>
         <tr>
           <td>
-            <h2 class="contents__inner_text">
+            <cite class="contents__inner_text">
               <%= link_to room.name, room_path(room.id) %>
             </h2>
-          </td>
+          </cite>
         </tr>
         <% end %>
       </tbody>

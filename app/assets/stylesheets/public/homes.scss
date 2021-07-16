@@ -2,9 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.all {
-  background: #1D6BDE;
-}
+
 
 .contents {
   transform:skew(0, 5deg);
@@ -21,6 +19,10 @@
 .contents__inner_text {
   color: #fff;
   padding-left: 20px;
+}
+
+.contents__inner_text span {
+  text-decoration-line: line-through;
 }
 
 .contents__image {

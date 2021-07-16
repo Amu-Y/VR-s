@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
 .menu {
   height: 100%;
   position: fixed;
@@ -103,6 +105,7 @@
   transition: all 0.5s ease;
   font-size: 2em;
   text-shadow: -1px -1px #4f4f4f, 1px 1px #121212;
+  font-family: 'Black Ops One', cursive;
 }
 .menu__info_logo:hover {
   opacity: 1;
