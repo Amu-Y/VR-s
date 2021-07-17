@@ -92,7 +92,7 @@
     </div>
   </div>
 
-  <div>
+  <div class="all__inner">
     <table>
       <thead>
         <tr>
@@ -108,9 +108,8 @@
         <tr>
           <td>
             <cite class="contents__inner_text">
-              <%= link_to room.name, room_path(room.id) %>
-            </h2>
-          </cite>
+              <%= link_to room.name, room_path(room.id), class:"all__inner_text" %>
+            </cite>
         </tr>
         <% end %>
       </tbody>
@@ -120,6 +119,7 @@
 
 <%= form_with model: [@room], local:true do |f| %>
 <%= f.text_field :name, placeholder: "タイトル" %>
+<%= f.collection_select :genre_id, Genre.all, :id, :name, prompt: "--選択してください--", size: "30", class: "form-control" %>
 <%= f.submit '新規登録', class: "btn btn-success" %>
 <% end %>
 

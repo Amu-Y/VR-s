@@ -62,23 +62,23 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #ログイン機能
-  gem 'devise'#, '~> 4.8'
+  gem 'devise'
 
-  gem 'dotenv-rails'#, '~> 2.7', '>= 2.7.6'
-  gem 'omniauth'#, '~> 2.0', '>= 2.0.4'
+  gem 'dotenv-rails'
+  gem 'omniauth'
   gem 'omniauth-rails_csrf_protection'
 
-  gem 'omniauth-facebook'#, '~> 8.0'
-  gem 'omniauth-twitter'#, '~> 1.4'
-  gem 'omniauth-google-oauth2'#, '~> 1.0'
+  gem 'omniauth-facebook'
+  gem 'omniauth-twitter'
+  gem 'omniauth-google-oauth2'
 
 # 投稿機能
   gem "refile", require: "refile/rails", github: 'manfe/refile'
   gem "refile-mini_magick"
-  gem 'rinku'#, '~> 2.0', '>= 2.0.6'
+  gem 'rinku'
 
 #検索機能
-  gem 'ransack'#, '~> 2.4', '>= 2.4.2'
+  gem 'ransack'
 
 #ページネーション
   gem 'kaminari'

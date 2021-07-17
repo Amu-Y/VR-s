@@ -14,18 +14,18 @@ Rails.application.routes.draw do
     resources :rooms, only: [:create, :show]
 
   end
-  
+
   #管理者側ルーティング
   devise_for :admins, controllers: {
     sessions: 'admins/sessions'
   }
 
    namespace :admin do
-     
-     resources :users, ony:[:index, :edit]
-     resources :rooms, only:[:index, :edit]
-     resources :genres, only:[:index, :edit, :update]
-     
+
+     resources :users, ony:[:index, :edit, :update]
+     resources :rooms, only:[:index, :edit, :update, :destroy]
+     resources :genres, only:[:index, :edit, :create, :update]
+
    end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

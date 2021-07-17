@@ -52,15 +52,15 @@
     <ul>
       <li class="menu__icon_list">
         <%= link_to  admin_users_path, class: "menu__icon_link" do  %>
-          <i class="fas fa-home "></i>
+          <i class="fas fa-users"></i>
         <% end %></li>
       <li class="menu__icon_list">
         <%= link_to admin_rooms_path, class: "menu__icon_link" do  %>
-          <i class="fas fa-globe-americas"></i>
+          <i class="fas fa-laptop-house"></i>
         <% end %></li>
       <li class="menu__icon_list">
-        <%= link_to user_path(current_user), class: "menu__icon_link" do  %>
-          <i class="fas fa-user"></i>
+        <%= link_to admin_genres_path, class: "menu__icon_link" do  %>
+          <i class="fas fa-object-group"></i>
         <% end %></li>
       <li class="menu__icon_list">
         <%= link_to destroy_admin_session_path, method: :delete, class: "menu__icon_link" do  %>
@@ -83,7 +83,7 @@
         <%= link_to "Room", admin_rooms_path, class: "menu__text_link" %>
         </li>
       <li class="menu__text_list">
-        <%= link_to "My page", user_path(current_user), class: "menu__text_link"  %>
+        <%= link_to "Genre", admin_genres_path, class: "menu__text_link"  %>
         </li>
       <li class="menu__text_list">
         <%= link_to "Logout", destroy_admin_session_path, method: :delete, class: "menu__text_link"  %>

@@ -1,22 +1,33 @@
-<main>
-  <div class="">
-    <div class="">
-      <div class="">
-        <h2>User info</h2>
+<main class="all">
+  <div class="contents">
+    <%= render 'layouts/header' %>
+  </div>
+  <div class=all__inner"">
+    <div class="user__edit">
+      <div>
+        <h2 class="all__inner_text">User info</h2>
           <%= form_with model:@user, local:true do |f| %>
-            <div class="form-group">
-              <label for="inputName">Name</label>
-                <%= f.text_field :name, autofocus: true, id:"inputName", placeholder:"名前", class: "form-control name" %>
+
+            <div class="user__textbox">
+              <div class="user__textbox_paragraph">
+                <label class="user__textbox_label">Name</label>
+                <%= f.text_field :name, autofocus: true, id:"inputName", placeholder:"名前", class: "user__textbox_body" %>
+              </div>
             </div>
-            <div class="form-group">
+            <div class="all__inner_text">
               <label for="user_image">Image</label>
               <%= f.attachment_field :icon, placeholder: "プロフィール画像", class: "form-control-file user_image" %>
             </div>
-            <div class="form-group">
-              <label for="user_introduction">Introduction</label>
-              <%= f.text_area :introduction, class: "form-control introduction" %>
+
+            <div class="user__textbox">
+              <div class="user__textbox_paragraph">
+                <label class="user__textbox_label">Introduction</label>
+                <%= f.text_area :introduction, class: "user__textbox_bigbody" %>
+              </div>
             </div>
-            <div class="form-group">
+
+
+            <div class="all__inner_text">
               <%= f.submit "Update User",class: "btn btn-secondary"  %>
             </div>
           <% end %>
