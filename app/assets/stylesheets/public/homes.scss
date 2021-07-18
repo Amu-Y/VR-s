@@ -4,7 +4,13 @@
 
 
 
-.contents {
+// .contents__inner {
+//   padding: 60px 0;
+// }
+
+
+// 画像ヘッダー
+.contents__header {
   transform:skew(0, 5deg);
   height: 500px;
   width: 100%;
@@ -12,7 +18,7 @@
   position: relative;
 }
 
-.contents__reverse {
+.contents__header_reverse {
   transform:skew(0, -5deg);
   height: 500px;
   width: 100%;
@@ -20,20 +26,6 @@
   position: relative;
 }
 
-.contents__inner {
-  padding: 60px 0;
-}
-
-.contents__inner_text {
-  color: #fff;
-  padding-left: 20%;
-}
-
-.contents__inner_text span {
-  text-decoration-line: line-through;
-}
-
-// 画像ヘッダー
 .contents__image {
   height: 500px;
   background-image: image-url('VR_image1.jpg');
@@ -48,6 +40,29 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+// トップ画面テキスト要素
+
+.contents {
+  color: #fff;
+}
+
+.contents__commentary {
+  
+}
+
+.contents__criterion {
+  
+}
+
+.contents__inner_text {
+  color: #fff;
+  padding-left: 20px;
+}
+
+.contents__inner_text span {
+  text-decoration-line: line-through;
 }
 
 

@@ -1,6 +1,6 @@
 class Public::HomesController < ApplicationController
 
-  def home
+  def index
     @room = Room.new
     @rooms = Room.all
 

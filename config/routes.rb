@@ -4,7 +4,7 @@ Rails.application.routes.draw do
         sessions: 'users/sessions'
       }
   scope module: :public do
-    root to: "homes#home"
+    root to: "homes#index"
     get 'about' => 'homes#about'
 
     resources :users, only: [:create, :show, :edit, :update]

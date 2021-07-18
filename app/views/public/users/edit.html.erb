@@ -22,13 +22,11 @@
             <div class="user__textbox">
               <div class="user__textbox_paragraph">
                 <label class="user__textbox_label">Introduction</label>
-                <%= f.text_area :introduction, class: "user__textbox_bigbody" %>
+                <%= f.text_area :introduction, placeholder:"自己紹介:好きなコンテンツや語りたい事を入力しましょう。", class: "user__textbox_bigbody" %>
               </div>
             </div>
-
-
-            <div class="all__inner_text">
-              <%= f.submit "Update User",class: "btn btn-secondary"  %>
+            <div class="button__panel">
+              <%= f.submit "Update User",class: "button"  %>
             </div>
           <% end %>
       </div>
