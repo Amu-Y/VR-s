@@ -16,7 +16,8 @@ Genre.create!(
    {name: 'コンテンツ'},
    {name: 'ゲーム'},
    {name: '技術'},
-   {name: '企業'}
+   {name: '企業'},
+   {name: 'イベント'}
   ]
 )
 
@@ -32,10 +33,15 @@ User.create!(
 Room.create!(
   [
    {name: 'ALTDEUS: Beyond Chronos', genre_id: 2},
-   {name: 'Oculus', genre_id: 3},
+   {name: 'Oculus', genre_id: 4},
    {name: 'Pistol Whip', genre_id: 2},
    {name: 'SUPERHOT VR', genre_id: 2},
    {name: 'Beat Saber', genre_id: 2},
-   {name: 'Creed: Rise to Glory™', genre_id: 2}
+   {name: 'Creed: Rise to Glory™', genre_id: 2},
+   {name: 'ソニー', genre_id: 4},
+   {name: 'Disney Movies VR', genre_id: 1},
+   {name: '脳波操作', genre_id: 3},
+   {name: '東京クロノス', genre_id: 2},
+   {name: 'キズナアイ', genre_id: 2},
   ]
  )
