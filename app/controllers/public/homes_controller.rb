@@ -2,7 +2,7 @@ class Public::HomesController < ApplicationController
 
   def index
     @room = Room.new
-    @rooms = Room.all
+    @rooms = Room.page(params[:page]).per(10)
 
   end
 

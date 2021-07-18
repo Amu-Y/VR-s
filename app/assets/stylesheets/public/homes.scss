@@ -46,22 +46,31 @@
 
 .contents {
   color: #fff;
+  padding: 50px 0 80px;
 }
 
 .contents__commentary {
-  
+  width: 80%;
+  margin-left : auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.contents__commentary_title {
+  padding: 50px;
 }
 
 .contents__criterion {
-  
+  width: 80%;
+  margin-left : auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+  vertical-align: top;
+　text-align: right;
 }
 
-.contents__inner_text {
-  color: #fff;
-  padding-left: 20px;
-}
-
-.contents__inner_text span {
+.contents__criterion span {
   text-decoration-line: line-through;
 }
 
