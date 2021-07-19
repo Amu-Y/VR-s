@@ -1,23 +1,21 @@
-<main class="all">
-  <header class="contents__header">
-    <%= render 'layouts/header' %>
-  </header>
-    <div class="all__inner">
-      <div>
-        <h1 class="all__inner_text">User page</h1>
-          <div class="all__inner_text">
-            <%= attachment_image_tag @user, :icon, :fill, 200, 200, format: 'jpeg', fallback: "no_image.jpg", class: "icon__body_mypage" %>
-          </div>
-          <h4 class="all__inner_text">name</h4>
-            <p class="all__inner_text"><%= @user.name %></p>
-          <h4 class="all__inner_text">introduction</h4>
-            <p class="all__inner_text"><%= @user.introduction %></p>
-          <div class="all__inner_text">
-            <% if user_signed_in? %>
-            <%= link_to "edit", edit_user_path(@user) %>
-            <% else %>
-            <% end %>
+<header class="contents__header">
+  <%= render 'layouts/header' %>
+</header>
+  <div class="all__inner">
+    <div>
+      <h1 class="all__inner_text">User page</h1>
+        <div class="all__inner_text">
+          <%= attachment_image_tag @user, :icon, :fill, 200, 200, format: 'jpeg', fallback: "no_image.jpg", class: "icon__body_mypage" %>
         </div>
+        <h4 class="all__inner_text">name</h4>
+          <p class="all__inner_text"><%= @user.name %></p>
+        <h4 class="all__inner_text">introduction</h4>
+          <p class="all__inner_text"><%= @user.introduction %></p>
+        <div class="all__inner_text">
+          <% if user_signed_in? %>
+          <%= link_to "edit", edit_user_path(@user) %>
+          <% else %>
+          <% end %>
       </div>
     </div>
-</main>
+  </div>

@@ -21,11 +21,12 @@ body {
 
 main {
   margin-left: 72px
+
 }
 
 .all {
   background: #1D6BDE;
-  
+
 }
 
 .all__inner {
@@ -37,4 +38,18 @@ main {
 .all__inner_text {
   text-align: center;
   color: #fff;
+}
+
+.pagination {
+  margin-top: 30px;
+  font-size: 25px;
+}
+
+.errors {
+  list-style: none;
+  color: #FF3366;
+}
+
+footer {
+  padding: 50px;
 }

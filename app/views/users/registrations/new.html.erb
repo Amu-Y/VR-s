@@ -1,33 +1,31 @@
-<main class="all">
-  <header class="contents__header">
-    <%= render 'layouts/header' %>
-  </header>
-    <div class="form">
-      <div class="form__wrapper">
-        <h1 class="form__title">Sign In</h1>
-          <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-            <%= render "users/shared/error_messages", resource: resource %>
-              <form class="form__box">
-                <div class="form__item">
-                  <%= f.text_field :name, autofocus: true, placeholder: "name", class:"form__item_input" %>
-                </div>
-                <div class="form__item">
-                  <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email", class:"form__item_input" %>
-                </div>
-                <div class="form__item">
-                  <%= f.password_field :password, autocomplete: "new-password", placeholder: "password(6 characters minimum)", class:"form__item_input" %>
-                </div>
-                <div class="form__item">
-                  <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "password_confirmation", class:"form__item_input" %>
-                </div>
-                <div class="button__panel">
-                   <%= f.submit "Sign up", class: "button" %>
-                </div>
-              </form>
-          <% end %>
-        <div class="form__footer">
-          <p><%= render "users/shared/links", class: "form__footer_link" %></p>
-        </div>
+<header class="contents__header">
+  <%= render 'layouts/header' %>
+</header>
+  <div class="form">
+    <div class="form__wrapper">
+      <h1 class="form__title">Sign In</h1>
+        <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+          <%= render 'layouts/error_messages', model: f.object %>
+            <form class="form__box">
+              <div class="form__item">
+                <%= f.text_field :name, autofocus: true, placeholder: "name", class:"form__item_input" %>
+              </div>
+              <div class="form__item">
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email", class:"form__item_input" %>
+              </div>
+              <div class="form__item">
+                <%= f.password_field :password, autocomplete: "new-password", placeholder: "password(6 characters minimum)", class:"form__item_input" %>
+              </div>
+              <div class="form__item">
+                <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "password_confirmation", class:"form__item_input" %>
+              </div>
+              <div class="button__panel">
+                 <%= f.submit "Sign up", class: "button" %>
+              </div>
+            </form>
+        <% end %>
+      <div class="form__footer">
+        <p><%= render "users/shared/links", class: "form__footer_link" %></p>
       </div>
     </div>
-</main>
+  </div>

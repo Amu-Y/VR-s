@@ -1,7 +1,7 @@
 class Room < ApplicationRecord
 
-  validates :name, confirmation: true
-  validates :name, presence: true
+  validates :name, uniqueness: { message: 'が既にあるルームと同じです。' }
+  validates :name, presence: { message: 'は１文字以上入力してください。' }
 
 
   has_many :messages, dependent: :destroy

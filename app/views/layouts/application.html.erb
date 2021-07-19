@@ -11,6 +11,9 @@
 
   <body>
     <%= render 'layouts/menu',user: @user %>
+    <main class="all">
     <%= yield %>
+    <%= render 'layouts/footer' %>
+    </main>
   </body>
 </html>

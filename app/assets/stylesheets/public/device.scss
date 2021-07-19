@@ -10,7 +10,7 @@
 .form {
   color: #5e5e5e;
   font: 400 87.5%/1.5em 'Open Sans', sans-serif;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   font-family: 'FontAwesome', sans-serif;
   margin: 150px 0 150px 0;
 }
@@ -76,6 +76,12 @@
 
 .button:hover {
   background: #ee3e52;
+}
+
+.botton__position {
+  width: 40%;
+  margin-left : auto;
+  margin-right: auto;
 }
 
 .form__footer {

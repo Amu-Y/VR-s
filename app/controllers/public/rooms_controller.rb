@@ -3,12 +3,17 @@ class Public::RoomsController < ApplicationController
   def create
     if user_signed_in?
       @room = Room.new(room_params)
-      @room.save
+      if @room.save
+        redirect_to room_path(@room.id)
+      else
+        @rooms = Room.all
+        @rooms = Room.page(params[:page]).per(10)
+        render "public/homes/index"
+      end
     else
-      @genres = Genre.all
+      flash[:notice] = "ログインされていません。初めての方は「Sign in」から会員登録して下さい。"
       redirect_to root_path
     end
-    redirect_to room_path(@room.id)
   end
 
   def show
