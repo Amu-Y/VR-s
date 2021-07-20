@@ -26,8 +26,9 @@ before_action :set_q, only: [:search]
   end
 
   def index
-    @q = Room.ransack(params[:name])
+    @q = Room.ransack(params[:q])
     @rooms = @q.result(distinct: true).page(params[:page]).per(10)
+    #byebug
   end
 
   private

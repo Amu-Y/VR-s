@@ -11,16 +11,11 @@ Rails.application.routes.draw do
 
     #チャット機能
     resources :messages, only: [:create]
-    
-    
-    
-    # 検索機能
-    resources :rooms, only: [:create, :show, :index] do
-      collection do
-        get 'search'
-      end
-    end
+    resources :rooms, only: [:create, :show, :index]
 
+
+    # 検索機能
+    resources :homes, only: [:index]
   end
 
   #管理者側ルーティング
