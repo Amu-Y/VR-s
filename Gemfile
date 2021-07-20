@@ -64,18 +64,17 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #ログイン機能
   gem 'devise'
 
-  gem 'dotenv-rails'
-  gem 'omniauth'
-  gem 'omniauth-rails_csrf_protection'
+  # gem 'omniauth'
+  # gem 'omniauth-rails_csrf_protection'
 
-  gem 'omniauth-facebook'
-  gem 'omniauth-twitter'
-  gem 'omniauth-google-oauth2'
+  # gem 'omniauth-facebook'
+  # gem 'omniauth-twitter'
+  # gem 'omniauth-google-oauth2'
 
 # 投稿機能
   gem "refile", require: "refile/rails", github: 'manfe/refile'
   gem "refile-mini_magick"
-  gem 'rinku'
+  # gem 'rinku'
 
 #検索機能
   gem 'ransack'
@@ -90,3 +89,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #レイアウト
   gem 'jquery-rails'
   gem 'font-awesome-rails'
+
+#データベース
+  gem 'dotenv-rails'
+  group :production do
+  gem 'mysql2'
+  end
