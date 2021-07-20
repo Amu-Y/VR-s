@@ -12,9 +12,10 @@
 }
 /* チャットの外側部分① */
 .bms__messages_container {
+  min-height: 750px;
   height: 100%;/*your_containerに対して100%になる */
   width: 100%;/*your_containerに対して100%になる */
-  background-color: #eee;
+  background-color: #D7EEFF;
 }
 
 /* ヘッダー部分② */
@@ -22,8 +23,8 @@
   padding: 6px;/*隙間調整*/
   font-size: 16px;
   height: 34px;
-  background: #ddd;
-  border: 1px solid #ccc;
+  background: #C2EEFF;
+  border: 1px solid #00ECFF;
 }
 
 .bms__chat_user_status {
@@ -62,7 +63,7 @@
 .bms__message_content{
   padding: 20px;/*文字や画像（コンテンツ）の外側に隙間を入れる*/
 }
-    
+
 /* メッセージ１（左側） */
 .bms__left {
   float: left;/*吹き出しをbms_messagesに対して左寄せ*/
@@ -76,7 +77,7 @@
   border-radius: 30px 30px 30px 0px;/*左下だけ尖らせて吹き出し感を出す*/
   margin-right: 50px;/*左側の発言だとわかる様に、吹き出し右側に隙間を入れる*/
 }
-    
+
 /* メッセージ２（右側） */
 .bms__right {
   float: right;/*吹き出しをbms_messagesに対して右寄せ*/
@@ -90,7 +91,7 @@
   border-radius: 30px 30px 0px 30px;/*右下だけ尖らせて吹き出し感を出す*/
   margin-left: 50px;/*右側の発言だとわかる様に、吹き出し左側に隙間を入れる*/
 }
-    
+
 /* 回り込みを解除 */
 .bms__clear {
     clear: both; /* 左メッセージと右メッセージの回り込み(float)の効果の干渉を防ぐために必要（これが無いと、自分より下のメッセージにfloatが影響する） */
@@ -98,12 +99,14 @@
 
 /* テキストエリア、送信ボタン④ */
 .bms__send {
-  background-color:#eee;/*タイムラインの色と同じにする*/
+  width: 94.25%;
+  background-color:	#D7EEFF;/*タイムラインの色と同じにする*/
   border-right: 1px solid #ddd;
   border-left: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  height: 48px;
   padding: 4px;
+  position: absolute;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
 }
 
 .bms__send_message{

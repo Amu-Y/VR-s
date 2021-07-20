@@ -1,5 +1,5 @@
 class Public::UsersController < ApplicationController
-  
+
   before_action :authenticate_user!, only: [:show]
 
   def create
@@ -10,7 +10,7 @@ class Public::UsersController < ApplicationController
     @myself = current_user
     @user = User.find(params[:id])
   end
-  
+
   def edit
     @user = User.find(params[:id])
     if @user != current_user
@@ -21,17 +21,16 @@ class Public::UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-    flash[:notice] = "You have updated user successfully."
     redirect_to user_path(@user.id)
     else
     render :edit
     end
   end
-  
+
   private
 
   def user_params
     params.require(:user).permit(:name, :introduction, :icon)
   end
-  
+
 end

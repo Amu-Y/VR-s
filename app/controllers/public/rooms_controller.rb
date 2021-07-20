@@ -1,5 +1,7 @@
 class Public::RoomsController < ApplicationController
 
+before_action :set_q, only: [:search]
+
   def create
     if user_signed_in?
       @room = Room.new(room_params)
@@ -21,6 +23,11 @@ class Public::RoomsController < ApplicationController
     @genres = Genre.all
     @message = Message.new
     @messages = @room.messages
+  end
+
+  def index
+    @q = Room.ransack(params[:name])
+    @rooms = @q.result(distinct: true).page(params[:page]).per(10)
   end
 
   private
