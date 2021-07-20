@@ -104,9 +104,9 @@
         ・他の人と仲良くする気のない子はそもそも参加してはいけません、ここはVR友を作る場です。</br>
         ・ルールを守って楽しくチャット。</p>
 
-          <%= search_form_for @q do |f| %>
-            <%= f.label :name, 'タイトル' %>
-            <%= f.search_field :name %>
+          <%= search_form_for @q, url: homes_path do |f| %>
+            <%= f.label :name_cont, 'タイトル' %>
+            <%= f.search_field :name_cont %>
             <br>
             <%= f.submit '検索' %>
           <% end %>
