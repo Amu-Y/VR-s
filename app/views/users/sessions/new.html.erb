@@ -1,0 +1,31 @@
+<header class="contents__header">
+  <%= render 'layouts/header' %>
+</header>
+  <div class="form">
+    <div class="form__wrapper">
+      <h1 class="form__title">Log in</h1>
+        <%= form_with model: @user, url: user_session_path, local: true do |f| %>
+          <%= render 'layouts/error_messages', model: f.object %>
+            <form class="form__box">
+              <div class="form__item">
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email", class:"form__item_input" %>
+              </div>
+              <div class="form__item">
+                <%= f.password_field :password, autocomplete: "new-password", placeholder: "password", class:"form__item_input" %>
+              </div>
+                <% if devise_mapping.rememberable? %>
+                  <div class="field">
+                    <%= f.check_box :remember_me %>
+                    <%= f.label :remember_me %>
+                  </div>
+                <% end %>
+              <div class="button__panel">
+                 <%= f.submit "Log in", class: "button" %>
+              </div>
+            </form>
+        <% end %>
+      <div class="form__footer">
+        <p><%#= render "users/shared/links", class: "form__footer_link" %></p>
+      </div>
+    </div>
+  </div>

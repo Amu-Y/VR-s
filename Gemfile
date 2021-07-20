@@ -19,7 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+# gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -62,22 +62,23 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #ログイン機能
-  gem 'devise'#, '~> 4.8'
+  gem 'devise'
 
-  gem 'dotenv-rails'#, '~> 2.7', '>= 2.7.6'
-  gem 'omniauth'#, '~> 2.0', '>= 2.0.4'
+  gem 'dotenv-rails'
+  gem 'omniauth'
   gem 'omniauth-rails_csrf_protection'
 
-  gem 'omniauth-facebook'#, '~> 8.0'
-  gem 'omniauth-twitter'#, '~> 1.4'
-  gem 'omniauth-google-oauth2'#, '~> 1.0'
+  gem 'omniauth-facebook'
+  gem 'omniauth-twitter'
+  gem 'omniauth-google-oauth2'
 
 # 投稿機能
-  gem 'refile'
-  gem 'rinku'#, '~> 2.0', '>= 2.0.6'
+  gem "refile", require: "refile/rails", github: 'manfe/refile'
+  gem "refile-mini_magick"
+  gem 'rinku'
 
 #検索機能
-  gem 'ransack'#, '~> 2.4', '>= 2.4.2'
+  gem 'ransack'
 
 #ページネーション
   gem 'kaminari'
@@ -87,6 +88,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   gem 'enum_help'
 
 #レイアウト
-  gem 'bootstrap'
   gem 'jquery-rails'
   gem 'font-awesome-rails'

@@ -1,0 +1,84 @@
+// Place all the styles related to the public::users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// アイコン
+.icon__body {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.icon__body_mypage {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user__edit {
+  width: 60%;
+  margin: 0 auto;
+  padding: 50px 10px 120px;
+}
+
+// 入力フォーム
+.user__textbox {
+	text-align: left;
+}
+
+.user__textbox_label {
+	display: block;
+	font-size: .95em;
+	margin: 0 0 .2em;
+	color: #fff;
+}
+
+.user__textbox_paragraph {
+	margin: 0 0 1em;
+}
+
+.user__textbox_body {
+	width: 100%;
+	padding: .4em .8em;
+	border-radius: 0;
+	background-image: none;
+	background:rgba(255,255,255,0.6);
+	border: 1px solid rgba(0,0,0,.1);
+	font-family: inherit;
+	font-size: .95em;
+	color: inherit;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+
+}
+
+.user__textbox_body:focus {
+	outline: none;
+	box-shadow: none;
+}
+
+// Introduction入力フォーム差分
+.user__textbox_bigbody {
+	width: 100%;
+	padding: .4em .8em;
+	border-radius: 0;
+	background-image: none;
+	background:rgba(255,255,255,0.6);
+	border: 1px solid rgba(0,0,0,.1);
+	font-family: inherit;
+	font-size: .95em;
+	color: inherit;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+  height: 100px;
+}
+
+.user__textbox_bigbody:focus {
+	outline: none;
+	box-shadow: none;
+	border: 1px solid rgba(0,0,0,.3);
+}

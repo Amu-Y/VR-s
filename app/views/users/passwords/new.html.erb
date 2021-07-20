@@ -1,0 +1,22 @@
+<header class="contents__header">
+  <%= render 'layouts/header' %>
+</header>
+  <div class="form">
+    <div class="form__wrapper">
+      <h1 class="form__title">Forgot your password?</h1>
+        <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <%= render 'layouts/error_messages', model: f.object %>
+            <form class="form__box">
+              <div class="form__item">
+                <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email", class:"form__item_input" %>
+              </div>
+              <div class="button__panel">
+                 <%= f.submit "Reset password instructions", class: "button" %>
+              </div>
+            </form>
+        <% end %>
+      <div class="form__footer">
+        <p><%= render "users/shared/links", class: "form__footer_link" %></p>
+      </div>
+    </div>
+  </div>

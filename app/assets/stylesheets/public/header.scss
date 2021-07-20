@@ -1,0 +1,35 @@
+
+
+.header {
+  height: 500px;
+  background-image: image-url('VR_header.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header__title {
+  position: absolute; /* To make the div to be place anywhere. It is out of the document flow */
+  top: 100px; /* The distance between the div with the top of document */
+  left: 0px; /* Make the div full width */
+  right: 0px; /* Make the div full width */
+  float:none;
+  margin:0 auto;
+}
+
+.header__title_text {
+  font-family: 'Black Ops One', cursive;
+  font-weight: 600;
+  font-size: 100px;
+  color: #ffffff;
+  text-align: center;
+  transform: rotate(-5deg);
+}
+
+.header__title_subtext {
+  font-family: Verdana;
+  font-size: 23px;
+  color: #ffffff;
+  text-align: center;
+  transform: rotate(-5deg);
+}

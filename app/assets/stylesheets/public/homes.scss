@@ -1,0 +1,98 @@
+// Place all the styles related to the public::homes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+// .contents__inner {
+//   padding: 60px 0;
+// }
+
+
+// 画像ヘッダー
+.contents__header {
+  transform:skew(0, 5deg);
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.contents__header_reverse {
+  transform:skew(0, -5deg);
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.contents__image {
+  height: 500px;
+  background-image: image-url('VR_image1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contents__image_two {
+  height: 500px;
+  background-image: image-url('VR_image2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+// トップ画面テキスト要素
+
+.contents {
+  color: #fff;
+  padding: 50px 0 80px;
+}
+
+.contents__commentary {
+  width: 80%;
+  margin-left : auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.contents__commentary_title {
+  padding: 50px;
+}
+
+.contents__criterion {
+  width: 80%;
+  margin-left : auto;
+  margin-right: auto;
+  padding-bottom: 50px;
+  vertical-align: top;
+　text-align: right;
+}
+
+.contents__criterion span {
+  text-decoration-line: line-through;
+}
+
+
+// トップ画面ルーム要素のレイアウト
+.rooms {
+  width: 70%;
+  margin: 0 auto;
+  padding: 50px 10px 120px;
+  text-align: center;
+}
+
+.rooms__text {
+  color: #fff;
+}
+
+.rooms__text_title {
+  font-size: 32px;
+}
+
+.rooms__text_cite {
+  color: #fff;
+  font-size: 3em;
+
+}

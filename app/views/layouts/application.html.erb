@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>VRS</title>
+    <title>VR's</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <%= render 'layouts/menu',user: @user %>
+    <main class="all">
     <%= yield %>
+    <%= render 'layouts/footer' %>
+    </main>
   </body>
 </html>
