@@ -10,8 +10,11 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show, :edit, :update]
 
     #チャット機能
-    resources :messages, only: [:create]
     resources :rooms, only: [:create, :show, :index]
+    resources :messages, only: [:create] do
+      resource :favorites, only: [:create, :destroy]
+    end
+
 
 
     # 検索機能

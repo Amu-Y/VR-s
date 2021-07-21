@@ -8,4 +8,7 @@ class User < ApplicationRecord
 
   #チャット機能
   has_many :messages, dependent: :destroy
+  has_many :favorites, dependent: :destroy
+  
+  
 end
