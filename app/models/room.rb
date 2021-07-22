@@ -8,4 +8,8 @@ class Room < ApplicationRecord
   has_many :entries, dependent: :destroy
   belongs_to :genre
 
+  def active_for_authentication?
+      super && (self.room_status === true)
+  end
+
 end

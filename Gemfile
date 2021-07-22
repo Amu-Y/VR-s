@@ -93,5 +93,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #データベース
   gem 'dotenv-rails'
   group :production do
-  gem 'mysql2'
+    gem 'mysql2'
   end

@@ -111,8 +111,10 @@
             <%= f.submit '検索' %>
           <% end %>
         <% @rooms.each do |room| %>
-
+          <% if room.room_status == true %>
           <div><%= link_to room.name, room_path(room.id), class:"rooms__text_cite" %></div>
+          <% else %>
+          <% end %>
         <% end %>
         <%= paginate @rooms %>
   </section>
@@ -137,7 +139,7 @@
         </div>
           <div class="botton__position">
             <div class="button__panel">
-               <%= f.submit 'Start', class: "button", data: {comfirm: "作成したルームは削除出来ません。カタカナ、または英語で同じタイトルが無いか確認しましたか？"} %>
+               <%= f.submit 'Start', data: { confirm: "作成したルームは削除出来ません。カタカナ、またはアルファベットで同じタイトルが無いか確認しましたか？"}, class: "button" %>
             </div>
           </div>
 

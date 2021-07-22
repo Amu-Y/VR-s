@@ -9,6 +9,11 @@ class User < ApplicationRecord
   #チャット機能
   has_many :messages, dependent: :destroy
   has_many :favorites, dependent: :destroy
-  
+
+  #アカウント管理機能
+
+  def active_for_authentication?
+      super && (self.user_status === true)
+  end
   
 end
