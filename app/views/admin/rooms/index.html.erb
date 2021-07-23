@@ -1,0 +1,40 @@
+<header class="contents__header">
+  <%= render 'layouts/header' %>
+</header>
+<article class="rooms">
+  <section class="rooms__text">
+    <h1 class="rooms__text_title">
+      Room list
+      </h1>
+          <%= search_form_for @q, url: admin_rooms_path do |f| %>
+            <%= f.label :name_cont, 'タイトル' %>
+            <%= f.search_field :name_cont %>
+            <br>
+            <%= f.submit '検索' %>
+          <% end %>
+          <table class="table__position">
+            <thead>
+              <tr>
+                <th>ルーム名</th>
+                <th>ステータス</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @rooms.each do |room| %>
+              <tr>
+                <td><%= room.name%></td>
+                <td>
+                  <% if room.room_status == true %>
+                    <span><%= link_to "有効", admin_room_path(room), method: :patch %></span>
+                  <% else %>
+                    <span><%= link_to "停止", admin_room_path(room), method: :patch %></span>
+                  <% end %>
+                </td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+
+        <%= paginate @rooms %>
+  </section>
+</article>

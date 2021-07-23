@@ -39,6 +39,7 @@
                   <%= link_to attachment_image_tag(m.user, :icon, :fill, 100, 100, fallback: "no_image.jpg", class: "icon__body"), user_path(m.user) %>
                   <%= m.user.name %>
                   <%= l m.created_at %>
+                  <span id="favorite-btn_<%= m.id %>"><%= render 'public/favorites/favorite-btn', m: m %></span>
                   <%= m.body %>
                   <%= attachment_image_tag m, :image, format: 'jpeg', size: "100x100" %>
                 </div>
