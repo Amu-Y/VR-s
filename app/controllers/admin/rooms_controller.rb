@@ -7,13 +7,17 @@ class Admin::RoomsController < ApplicationController
   
   def update 
     @room = Room.find(params[:id])
+    if admin_signed_in?
       if @room.room_status == true
         @room.update(room_status: :false)
       else
         @room.update(room_status: :true)
       end
-    reset_session
-    redirect_to admin_rooms_path
+      reset_session
+      redirect_to admin_rooms_path
+    else
+      redirect_to root_path
+    end
   end
   
 private

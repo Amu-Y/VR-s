@@ -10,14 +10,24 @@
         <%= f.text_field :name, placeholder: "ジャンル名", size: "30", class: "form-control mr-3" %>
         <%= f.submit '　新規登録　', class: "btn  btn-sm btn-secondary" %>
       <% end %>
-        <% @genres.each do |genre| %>
+
           <table class="table__position">
-            <tr>
-              <td><%= genre.name %></td>
-              <td><%= link_to edit_admin_genre_path(genre.id), class: "text-dark" do %><i class="fas fa-edit"></i><% end %></td>
-            </tr>
+            <thead>
+              <tr>
+                <th>ジャンル名</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @genres.each do |genre| %>
+              <tr>
+                <td><%= genre.name %></td>
+                <td><%= link_to edit_admin_genre_path(genre.id), class: "text-dark" do %><i class="fas fa-edit"></i><% end %></td>
+              </tr>
+              <% end %>
+            </tbody>
           </table>
-        <% end %>
+
         <%= paginate @genres %>
   </section>
 </article>

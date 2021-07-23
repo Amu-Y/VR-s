@@ -12,14 +12,29 @@
             <br>
             <%= f.submit '検索' %>
           <% end %>
-        <% @rooms.each do |room| %>
-          <div><%= link_to room.name, room_path(room.id), class:"rooms__text_cite" %></div>
-            <% if room.room_status == true %>
-              <span><%= link_to "有効", admin_room_path(room), method: :patch %></span>
-            <% else %>
-              <span><%= link_to "停止", admin_room_path(room), method: :patch %></span>
-            <% end %>
-        <% end %>
+          <table class="table__position">
+            <thead>
+              <tr>
+                <th>ルーム名</th>
+                <th>ステータス</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @rooms.each do |room| %>
+              <tr>
+                <td><%= room.name%></td>
+                <td>
+                  <% if room.room_status == true %>
+                    <span><%= link_to "有効", admin_room_path(room), method: :patch %></span>
+                  <% else %>
+                    <span><%= link_to "停止", admin_room_path(room), method: :patch %></span>
+                  <% end %>
+                </td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+
         <%= paginate @rooms %>
   </section>
 </article>
