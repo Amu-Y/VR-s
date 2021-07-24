@@ -1,64 +1,60 @@
-<div class="bms__messages_container">
-  <!-- ヘッダー部分② -->
-  <div class="bms__chat_header">
-    <!--ステータス-->
-    <div class="bms__chat_user_status">
-      <div class="bms__chat_room_name">
-        <%= @room.genre.name %>:<%= @room.name %>
-      </div>
-    </div>
+
+<div class="room__messages_container">
+  <div class="room__header">
+    <b class="room__header_name">
+      <%= @room.genre.name %>:<%= @room.name %>
+      </b>
   </div>
-
-  <% if @messages.present? %>
-    <% @messages.each do |m| %>
-      <!-- タイムライン部分③ -->
-      <div class="bms__messages">
-        <% if m.user_id == current_user.id %>
-
-          <!--メッセージ（右側）-->
-          <div class="bms__message bms__right">
-            <div class="bms__message_box">
-              <div class="bms__message_content">
-                <div class="bms__message_text">
-                  <%= link_to attachment_image_tag(m.user, :icon, :fill, 100, 100, fallback: "no_image.jpg", class: "icon__body"), user_path(m.user) %>
-                  <%= m.user.name %>
-                  <%= l m.created_at %>
-                  <%= m.body %>
-                  <%= attachment_image_tag m, :image, format: 'jpeg', size: "100x100" %>
+    <% if @messages.present? %>
+      <% @messages.each do |m| %>
+        <div class="room__messages">
+          <% if m.user_id == current_user.id %>
+            <!--メッセージ（右側）-->
+          <div class="room__icon_right">
+            <%= link_to attachment_image_tag(m.user, :icon, :fill, 100, 100, fallback: "no_image.jpg", class: "icon__body"), user_path(m.user) %>
+          </div>
+            <div class="room__message room__right">
+              <div class="room__message_box">
+                <div class="room__message_content">
+                  <div class="room__message_text">
+                    <%= m.user.name %>
+                    <%= l m.created_at %></br>
+                    <%= m.body %></br>
+                    <%= attachment_image_tag m, :image, format: 'jpeg', size: "100x100" %></br>
+                    <span><i class="fas fa-heart"></i><%= m.favorites.count %></span>
+                  </div>
                 </div>
               </div>
             </div>
+          <% else %>
+            <!--メッセージ（左側）-->
+          <div class="room__icon_left">
+            <%= link_to attachment_image_tag(m.user, :icon, :fill, 100, 100, fallback: "no_image.jpg", class: "icon__body"), user_path(m.user) %>
           </div>
-
-        <% else %>
-          <!--メッセージ（左側）-->
-          <div class="bms__message bms__left">
-            <div class="bms__message_box">
-              <div class="bms__message_content">
-                <div class="bms__message_text">
-                  <%= link_to attachment_image_tag(m.user, :icon, :fill, 100, 100, fallback: "no_image.jpg", class: "icon__body"), user_path(m.user) %>
-                  <%= m.user.name %>
-                  <%= l m.created_at %>
-                  <span id="favorite-btn_<%= m.id %>"><%= render 'public/favorites/favorite-btn', m: m %></span>
-                  <%= m.body %>
-                  <%= attachment_image_tag m, :image, format: 'jpeg', size: "100x100" %>
+            <div class="room__message room__left">
+              <div class="room__message_box">
+                <div class="room__message_content">
+                  <div class="room__message_text">
+                    <%= m.user.name %>
+                    <%= l m.created_at %></br>
+                    <%= m.body %></br>
+                    <%= attachment_image_tag m, :image, format: 'jpeg', size: "100x100" %></br>
+                    <span id="favorite-btn_<%= m.id %>"><%= render 'public/favorites/favorite-btn', m: m %></span>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        <% end %>
-      </div>
+          <% end %>
+        </div>
+      <% end %>
     <% end %>
-  <% end %>
-      <!-- テキストボックス、送信ボタン④ -->
-    <%= form_with model: @message, local: true do |f| %>
-      <div class="bms__send">
-        <%= f.attachment_field :image %>
-
-        <%= f.hidden_field :room_id, value: @room.id %>
-        <%= f.text_field :body, placeholder: "メッセージを入力して下さい" , class:"bms__send_message" %>
-        <%= f.submit "投稿",class: 'bms__send_btn'%>
-      </div>
-    <% end %>
-  </div>
 </div>
+      <!-- テキストボックス、送信ボタン④ -->
+      <%= form_with model: @message, local: true do |f| %>
+        <div class="room__send">
+          <%= f.attachment_field :image, class: "room__image_box" %>
+          <%= f.hidden_field :room_id, value: @room.id %>
+          <%= f.text_field :body, placeholder: "メッセージを入力して下さい" , class:"room__send_message" %>
+          <%= f.submit "投稿",class: 'room__send_btn'%>
+        </div>
+      <% end %>

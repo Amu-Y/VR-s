@@ -33,7 +33,11 @@
 - IDE：Cloud9
 
 ## 使用素材
-- phoctAC
-<https://www.photo-ac.com/>
-- designevo
-<https://www.designevo.com/>
+- shutterstock
+<https://www.shutterstock.com/>
+- コピペで簡単！Webパーツ屋
+<https://haniwaman.com/parts/>
+- PhotoshopVIP
+<https://photoshopvip.net/>
+- googleFonts
+<https://fonts.google.com/>
