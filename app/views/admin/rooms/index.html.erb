@@ -7,10 +7,12 @@
       Room list
       </h1>
           <%= search_form_for @q, url: admin_rooms_path do |f| %>
-            <%= f.label :name_cont, 'タイトル' %>
-            <%= f.search_field :name_cont %>
-            <br>
-            <%= f.submit '検索' %>
+            <div class="search">
+              <%= f.search_field :name_cont, class: "search__box" %>
+              <%= button_tag type: 'f.submit', class: "search__button" do %>
+              <i class="fas fa-search"></i>
+              <% end %>
+            </div>
           <% end %>
           <table class="table__position">
             <thead>

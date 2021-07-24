@@ -1,7 +1,5 @@
 class Public::HomesController < ApplicationController
 
-
-
   def index
     @room = Room.new
     @q = Room.ransack(params[:q])

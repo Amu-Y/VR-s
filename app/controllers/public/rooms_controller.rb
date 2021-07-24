@@ -18,16 +18,17 @@ before_action :set_q, only: [:search]
     end
   end
 
+  def index
+    @room = Room.new
+    @q = Room.ransack(params[:q])
+    @rooms = @q.result(distinct: true).page(params[:page]).per(10)
+  end
+
   def show
     @room = Room.find(params[:id])
     @genres = Genre.all
     @message = Message.new
     @messages = @room.messages
-  end
-
-  def index
-    @q = Room.ransack(params[:q])
-    @rooms = @q.result(distinct: true).page(params[:page]).per(10)
   end
 
   private
