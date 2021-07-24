@@ -1,119 +1,118 @@
 // Place all the styles related to the public::rooms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
 
-.your__container {
-  /* 高さや幅など、好きな様に設定
-  bms_messages_containerの方で、縦横いっぱいに広がってくれるので、
-  ここで充てた高さと横幅がそのままスタイルになる仕組み */
-
-  height:600px;/*ここはご自由に*/
-  width: 50%;/*ここはご自由に*/
-}
 /* チャットの外側部分① */
-.bms__messages_container {
-  min-height: 750px;
-  height: 100%;/*your_containerに対して100%になる */
-  width: 100%;/*your_containerに対して100%になる */
+.room__messages_container {
+  min-height: 680px;
+  height: 100%;
+  width: 100%;
   background-color: #D7EEFF;
 }
 
 /* ヘッダー部分② */
-.bms__chat_header {
-  padding: 6px;/*隙間調整*/
-  font-size: 16px;
-  height: 34px;
-  background: #C2EEFF;
-  border: 1px solid #00ECFF;
+.room__header {
+  margin-bottom: 20px;
+  padding: 6px;
+  font-size: 20px;
+  height: 40px;
+  background: #E0F2F7;
+  border: 1px solid #E0ECF8;
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0px;
 }
 
-.bms__chat_user_status {
-  float: left;/* bms_chat_headerに対して左寄せ */
-}
-
-.bms__chat_room_name {
-  float: left;/* bms_chat_user_statusに対して左寄せ */
-  line-height: 2em;/*高さ調整*/
-  padding-left: 8px;
+.room__header_name {
+  padding: 30px;
+  line-height: 2em;
+  font-family: 'Yomogi', cursive;
 }
 
 /* タイムライン部分③ */
-.bms__messages {
-  overflow: auto;/* スクロールを効かせつつ、メッセージがタイムラインの外に出ないようにする */
-  height:100%;/*テキストエリアが下に張り付く様にする*/
+.room__messages {
+  height: 100%;/*テキストエリアが下に張り付く様にする*/
+  overflow: auto;
   border-right: 1px solid #ddd;
   border-left: 1px solid #ddd;
-  background-color: #eee;
+  background-color: #D7EEFF;
 }
 /* メッセージ全般のスタイル */
-.bms__message {
+.room__message {
+  width: 70%;
   margin: 0px;
-  padding: 0 14px;/*吹き出しがタイムラインの側面にひっつかない様に隙間を開ける*/
   font-size: 16px;
   word-wrap: break-word;/* 吹き出し内で自動で改行 */
   white-space: normal;/*指定widthに合わせて、文字を自動的に改行*/
+
 }
 
-.bms__message_box{
-  margin-top: 20px;/*上下の吹き出しがひっつかない様に隙間を入れる*/
+.room__message_box{
+  margin-top: 100px;/*上下の吹き出しがひっつかない様に隙間を入れる*/
   max-width: 100%;/*文字が長くなった時に吹き出しがタイムラインからはみ出さない様にする*/
   font-size: 16px;
 }
 
-.bms__message_content{
-  padding: 20px;/*文字や画像（コンテンツ）の外側に隙間を入れる*/
+.room__message_content{
+  padding: 20px;
 }
 
 /* メッセージ１（左側） */
-.bms__left {
-  float: left;/*吹き出しをbms_messagesに対して左寄せ*/
+.room__icon_left {
+  float: left;
+}
+
+.room__left {
+  float: left;
   line-height: 1.3em;
 }
 
-.bms__left .bms__message_box {
-  color: #333;/*テキストを黒にする*/
+.room__left .room__message_box {
+  color: #333;
   background: #fff;
   border: 2px solid #13178E;
-  border-radius: 30px 30px 30px 0px;/*左下だけ尖らせて吹き出し感を出す*/
-  margin-right: 50px;/*左側の発言だとわかる様に、吹き出し右側に隙間を入れる*/
+  border-radius: 00px 30px 30px 30px;
 }
 
 /* メッセージ２（右側） */
-.bms__right {
-  float: right;/*吹き出しをbms_messagesに対して右寄せ*/
+.room__icon_right {
+  float: right;
+}
+
+.room__right {
+  float: right;
   line-height: 1.3em;
 }
 
-.bms__right .bms__message_box {
-  color: #fff;/*テキストを白にする*/
-  background: #13178E;
+.room__right .room__message_box {
+  color: #333;
+  background: #fff;
   border: 2px solid #13178E;
-  border-radius: 30px 30px 0px 30px;/*右下だけ尖らせて吹き出し感を出す*/
-  margin-left: 50px;/*右側の発言だとわかる様に、吹き出し左側に隙間を入れる*/
-}
-
-/* 回り込みを解除 */
-.bms__clear {
-    clear: both; /* 左メッセージと右メッセージの回り込み(float)の効果の干渉を防ぐために必要（これが無いと、自分より下のメッセージにfloatが影響する） */
+  border-radius: 30px 0px 30px 30px;
+  margin-left: 50px;
 }
 
 /* テキストエリア、送信ボタン④ */
-.bms__send {
-  width: 94.25%;
-  background-color:	#D7EEFF;/*タイムラインの色と同じにする*/
+.room__send {
+
+  background-color:	#D7EEFF;
   border-right: 1px solid #ddd;
   border-left: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   padding: 4px;
-  position: absolute;/*←絶対位置*/
-  bottom: 0; /*下に固定*/
+  box-shadow: 0px 10px 10px -5px rgba(0,0,0,0.5);
 }
 
-.bms__send_message{
-  width: calc(100% - 75px);/*常に送信ボタンの横幅を引いたサイズに動的に計算*/
+.room__image_box {
+  margin: 20px 0 5px 0;
+  float: right;
+}
+
+.room__send_message{
+  width: calc(100% - 73px);/*常に送信ボタンの横幅を引いたサイズに動的に計算*/
   line-height: 16px;
   height: 48px;
-  padding: 14px 6px 0px 6px;/*文字がテキストエリアの中心になる様に隙間調整*/
   border: 1px solid #ccc;
   border-radius: 4px;/*角丸*/
   text-align: left;/*文字を左寄せ*/
@@ -121,12 +120,12 @@
   box-sizing: border-box;/*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
 }
 
-.bms__send_btn {
+.room__send_btn {
   width: 72px;
   height: 48px;
   font-size: 16px;
   line-height: 3em;
-  float: right;/*bms_sendに対して右寄せ*/
+  float: right;
   color: #fff;
   font-weight: bold;
   background: #bcbcbc;
@@ -136,7 +135,7 @@
   box-sizing: border-box;/*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
 }
 
-.bms__send_btn:hover {
+.room__send_btn:hover {
   background: #13178E; /*マウスポインタを当てた時にアクティブな色になる*/
   cursor: pointer;/*マウスポインタを当てた時に、カーソルが指の形になる*/
 }
