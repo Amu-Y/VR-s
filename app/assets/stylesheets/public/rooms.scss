@@ -43,14 +43,14 @@
   width: 70%;
   margin: 0px;
   font-size: 16px;
-  word-wrap: break-word;/* 吹き出し内で自動で改行 */
-  white-space: normal;/*指定widthに合わせて、文字を自動的に改行*/
+  word-wrap: break-word;
+  white-space: normal;
 
 }
 
 .room__message_box{
-  margin-top: 100px;/*上下の吹き出しがひっつかない様に隙間を入れる*/
-  max-width: 100%;/*文字が長くなった時に吹き出しがタイムラインからはみ出さない様にする*/
+  margin-top: 100px;
+  max-width: 100%;
   font-size: 16px;
 }
 
@@ -110,14 +110,14 @@
 }
 
 .room__send_message{
-  width: calc(100% - 73px);/*常に送信ボタンの横幅を引いたサイズに動的に計算*/
+  width: calc(100% - 73px);
   line-height: 16px;
   height: 48px;
   border: 1px solid #ccc;
-  border-radius: 4px;/*角丸*/
-  text-align: left;/*文字を左寄せ*/
-  box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2) inset;/*内側に影を入れてテキストエリアらしくした*/
-  box-sizing: border-box;/*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
+  border-radius: 4px;
+  text-align: left;
+  box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.2) inset;
+  box-sizing: border-box;
 }
 
 .room__send_btn {
@@ -129,13 +129,13 @@
   color: #fff;
   font-weight: bold;
   background: #bcbcbc;
-  text-align: center;/*文字をボタン中央に表示*/
+  text-align: center;
   border: 1px solid #bbb;
-  border-radius: 4px;/*角丸*/
-  box-sizing: border-box;/*paddingとborderの要素の高さと幅の影響をなくす（要素に高さと幅を含める）*/
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 .room__send_btn:hover {
-  background: #13178E; /*マウスポインタを当てた時にアクティブな色になる*/
-  cursor: pointer;/*マウスポインタを当てた時に、カーソルが指の形になる*/
+  background: #13178E;
+  cursor: pointer;
 }

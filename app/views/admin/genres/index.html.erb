@@ -7,10 +7,13 @@
       Genre create&list
       </h1>
       <%= form_with model: [:admin, @genre], local:true do |f| %>
-        <%= f.text_field :name, placeholder: "ジャンル名", size: "30", class: "form-control mr-3" %>
-        <%= f.submit '　新規登録　', class: "btn  btn-sm btn-secondary" %>
+        <%= f.text_field :name, placeholder: "作成するジャンル名", size: "30", class:"user__textbox_body" %>
+          <div class="botton__position">
+            <div class="button__panel">
+               <%= f.submit '新規登録', class: "button" %>
+            </div>
+          </div>
       <% end %>
-
           <table class="table__position">
             <thead>
               <tr>
@@ -27,7 +30,6 @@
               <% end %>
             </tbody>
           </table>
-
         <%= paginate @genres %>
   </section>
 </article>

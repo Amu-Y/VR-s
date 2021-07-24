@@ -42,6 +42,7 @@ Room.create!(
    {name: 'Disney Movies VR', genre_id: 1},
    {name: '脳波操作', genre_id: 3},
    {name: '東京クロノス', genre_id: 2},
-   {name: 'キズナアイ', genre_id: 2},
+   {name: 'キュービズム', genre_id: 2},
+   {name: 'ダウン・ザ・ラビットホール', genre_id: 2}
   ]
  )
