@@ -21,7 +21,12 @@ body {
 
 main {
   margin-left: 72px
-  
+
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 .all {
@@ -40,7 +45,25 @@ main {
 
 
 @media screen and (max-width:425px) {
-  .all {
+  /*homes.sccs*/
+  .contents__commentary {
     width: 100%;
+  }
+
+  .contents__criterion {
+    width: 100%;
+  }
+
+  .rooms {
+    width: 100%;
+  }
+
+  .rooms__text_title {
+    font-size: 2em;
+  }
+
+  .rooms__text_cite {
+    color: #fff;
+    font-size: 1.5em;
   }
 }

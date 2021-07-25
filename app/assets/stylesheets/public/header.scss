@@ -33,3 +33,37 @@
   text-align: center;
   transform: rotate(-5deg);
 }
+
+
+// 画像ヘッダー
+.contents__header {
+  transform:skew(0, 5deg);
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.contents__header_reverse {
+  transform:skew(0, -5deg);
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.contents__image {
+  height: 500px;
+  background-image: image-url('VR_image1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contents__image_two {
+  height: 500px;
+  background-image: image-url('VR_image2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
