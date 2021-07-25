@@ -21,13 +21,14 @@ body {
 
 main {
   margin-left: 72px
-
 }
 
 input {
   -webkit-appearance: none;
   border-radius: 0;
 }
+
+
 
 .all {
   background: #1D6BDE;
@@ -45,17 +46,83 @@ input {
 
 
 @media screen and (max-width:425px) {
+
+  main {
+    margin-left: 0px
+  }
+
+  br {
+    display:none
+  }
+
+  /*manu.scss*/
+  .menu {
+    top: 45px;
+  }
+
+  .menu__icon {
+    background: rgba(38, 38, 38, 0);
+  }
+
+  .menu__icon_list {
+    border-bottom: none;
+  }
+
+  .menu__text {
+    display:none
+  }
+
+  .menu__info {
+    display:none
+  }
+
+  /*header.scss*/
+  .header {
+    height: 300px;
+  }
+
+  .header__title {
+    top: 100px;
+  }
+
+  .header__title_text {
+    font-size: 3em;
+  }
+
+  .header__title_subtext {
+    font-size: 0.8em;
+  }
+
+  .contents__header {
+    height: 300px;
+  }
+
+  .contents__header_reverse {
+    height: 300px;
+  }
+
+  .contents__image {
+    height: 300px;
+  }
+
+  .contents__image_two {
+    height: 300px;
+  }
+
   /*homes.sccs*/
   .contents__commentary {
-    width: 100%;
+    width: 95%;
+    font-size: 0.9em;
   }
 
   .contents__criterion {
-    width: 100%;
+    width: 95%;
+    font-size: 0.9em;
   }
 
   .rooms {
-    width: 100%;
+    width: 95%;
+    font-size: 0.9em;
   }
 
   .rooms__text_title {
@@ -65,5 +132,30 @@ input {
   .rooms__text_cite {
     color: #fff;
     font-size: 1.5em;
+  }
+
+  /*users.scss*/
+  .user {
+    width: 95%;
+    font-size: 0.9em;
+  }
+
+  .user__textbox_body {
+    width: 80%;
+  }
+  .user__textbox_bigbody {
+    width: 80%;
+  }
+
+  .form {
+    margin: 0 auto;
+    width: 95%;
+  }
+
+  /*rooms.scss*/
+  .room__header_name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }

@@ -9,10 +9,10 @@
 }
 
 .header__title {
-  position: absolute; /* To make the div to be place anywhere. It is out of the document flow */
-  top: 100px; /* The distance between the div with the top of document */
-  left: 0px; /* Make the div full width */
-  right: 0px; /* Make the div full width */
+  position: absolute;
+  top: 100px;
+  left: 0px;
+  right: 0px;
   float:none;
   margin:0 auto;
 }

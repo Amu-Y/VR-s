@@ -8,7 +8,6 @@
   z-index: 1000;
   transform-style: preserve-3d;
   perspective: 1000px;
-
 }
 
 .menu__icon {
@@ -60,9 +59,11 @@
   transform-origin: left;
   transform: perspective(1000px) rotateY(90deg);
 }
+
 .menu__text_list {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
+
 .menu__text_link {
   display: block;
   width: 200px;
@@ -75,6 +76,7 @@
   text-shadow: 0 1px 0 black;
   transition: all 0.5s ease;
 }
+
 .menu__text_link:hover {
   color: white;
   transform: translateX(-14px);
@@ -97,6 +99,7 @@
   line-height: 1.6;
   opacity: 0;
 }
+
 .menu__info_logo {
   width: 100px;
   height: 100px;
