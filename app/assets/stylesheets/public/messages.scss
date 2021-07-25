@@ -1,3 +1,65 @@
 // Place all the styles related to the public::messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* タイムライン部分③ */
+.room__messages {
+  height: 100%;
+  overflow: auto;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  background-color: #D7EEFF;
+}
+/* メッセージ全般のスタイル */
+.room__message {
+  width: 70%;
+  margin: 0px;
+  font-size: 16px;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.room__message_box{
+  margin-top: 100px;
+  max-width: 100%;
+  font-size: 16px;
+}
+
+.room__message_content{
+  padding: 20px;
+}
+
+/* メッセージ１（左側） */
+.room__icon_left {
+  float: left;
+}
+
+.room__left {
+  float: left;
+  line-height: 1.3em;
+}
+
+.room__left .room__message_box {
+  color: #333;
+  background: #fff;
+  border: 2px solid #13178E;
+  border-radius: 00px 30px 30px 30px;
+}
+
+/* メッセージ２（右側） */
+.room__icon_right {
+  float: right;
+}
+
+.room__right {
+  float: right;
+  line-height: 1.3em;
+}
+
+.room__right .room__message_box {
+  color: #333;
+  background: #fff;
+  border: 2px solid #13178E;
+  border-radius: 30px 0px 30px 30px;
+  margin-left: 50px;
+}

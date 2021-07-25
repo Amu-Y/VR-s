@@ -2,6 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.user {
+	width: 60%;
+  margin: 0 auto;
+}
+
+.user__content {
+	padding: 2em;
+  text-align: center;
+  color: #fff;
+}
+
 // アイコン
 .icon__body {
   width: 100px;
@@ -17,12 +28,6 @@
   border-radius: 50%;
 }
 
-.user__edit {
-  width: 60%;
-  margin: 0 auto;
-  padding: 50px 10px 120px;
-}
-
 // 入力フォーム
 .user__textbox {
 	text-align: left;
@@ -32,7 +37,6 @@
 	display: block;
 	font-size: .95em;
 	margin: 0 0 .2em;
-	color: #fff;
 }
 
 .user__textbox_paragraph {
@@ -48,7 +52,7 @@
 	border: 1px solid rgba(0,0,0,.1);
 	font-family: inherit;
 	font-size: .95em;
-	color: inherit;
+	color: #808080;
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	appearance: none;
@@ -70,7 +74,7 @@
 	border: 1px solid rgba(0,0,0,.1);
 	font-family: inherit;
 	font-size: .95em;
-	color: inherit;
+	color: #808080;
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	appearance: none;

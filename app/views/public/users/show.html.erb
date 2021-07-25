@@ -1,21 +1,28 @@
 <header class="contents__header">
   <%= render 'layouts/header' %>
 </header>
-  <div class="all__inner">
-    <div>
-      <h1 class="all__inner_text">User page</h1>
-        <div class="all__inner_text">
+<article class="user">
+  <section class="user__content">
+    <h1>
+      User page
+      </h1>
+        <div>
           <%= attachment_image_tag @user, :icon, :fill, 200, 200, format: 'jpeg', fallback: "no_image.jpg", class: "icon__body_mypage" %>
         </div>
-        <h4 class="all__inner_text">name</h4>
-          <p class="all__inner_text"><%= @user.name %></p>
-        <h4 class="all__inner_text">introduction</h4>
-          <p class="all__inner_text"><%= @user.introduction %></p>
-        <div class="all__inner_text">
+        <%= @user.favorites.count %>
+        <h4>
+          name
+          </h4>
+          <p><%= @user.name %></p>
+        <h4>
+          introduction
+          </h4>
+          <p><%= @user.introduction %></p>
+        <div>
           <% if user_signed_in? %>
           <%= link_to "edit", edit_user_path(@user) %>
           <% else %>
           <% end %>
-      </div>
-    </div>
-  </div>
+        </div>
+  </section>
+</article>

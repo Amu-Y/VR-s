@@ -19,10 +19,12 @@
   height: 100%;
   background: #262626;
 }
+
 .menu__icon_list {
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   list-style-type: none;
 }
+
 .menu__icon_link {
   display: block;
   width: 64px;
@@ -34,6 +36,7 @@
   text-shadow: 0 1px 0 black;
   transition: all 0.5s ease-out;
 }
+
 .menu__icon_list:hover {
   color: white;
   transform: translateX(10px) scale(1.2);
@@ -108,22 +111,13 @@
   text-shadow: -1px -1px #4f4f4f, 1px 1px #121212;
   font-family: 'Black Ops One', cursive;
 }
+
 .menu__info_logo:hover {
   opacity: 1;
   color: white;
   text-shadow: -1px -1px #575757, 1px 1px #121212;
 }
-.menu__info .menu__info_name {
-  font-size: 2em;
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: #424242;
-  text-shadow: -1px -1px #4f4f4f, 1px 1px #121212;
-}
-.menu__info .menu__info_quote {
-  color: #444;
-  text-shadow: 1px 1px #121212;
-}
+
 .menu__info .menu__info_link {
   font-size: 2em;
   color: #333333;
