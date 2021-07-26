@@ -13,3 +13,4 @@ class Public::FavoritesController < ApplicationController
     favorite.destroy
   end
 end
+

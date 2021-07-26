@@ -4,14 +4,15 @@
       <%= @room.genre.name %>:<%= @room.name %>
       </b>
   </div>
-  <%= render 'public/rooms/messages', messages: @messages %>
+    <div id="display"><%= render 'public/rooms/messages', messages: @messages %></div>
 </div>
   <!-- テキストボックス、送信ボタン④ -->
-  <%= form_with model: @message, local: true do |f| %>
+  <%= form_with model: [@message] do |f| %>
     <div class="room__send">
-      <%= f.attachment_field :image, class: "room__image_box" %>
+      <div class="errors"><%= flash[:error] %></div>
+      <%= f.attachment_field :image, class: "room__image_box", id: "image" %>
       <%= f.hidden_field :room_id, value: @room.id %>
-      <%= f.text_field :body, placeholder: "メッセージを入力して下さい" , class:"room__send_message" %>
+      <%= f.text_field :body, placeholder: "メッセージを入力して下さい" , class:"room__send_message", id: "text" %>
       <%= f.submit "投稿",class: 'room__send_btn'%>
     </div>
   <% end %>
