@@ -140,6 +140,18 @@ input {
     font-size: 0.9em;
   }
 
+  .icon__body {
+    width: 100px;
+    height: 100px;
+
+  }
+
+  .icon__body_mypage {
+    width: 200px;
+    height: 200px;
+
+  }
+
   .user__textbox_body {
     width: 80%;
   }
@@ -153,6 +165,116 @@ input {
   }
 
   /*rooms.scss*/
+  .room__messages_container {
+    min-height: 560px;
+  }
+
+  .room__header_name {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (max-width:768px) {
+  /*manu.scss*/
+  .menu__info {
+    display:none
+  }
+
+  /*header.scss*/
+  .header {
+    height: 300px;
+  }
+
+  .header__title {
+    top: 100px;
+  }
+
+  .header__title_text {
+    font-size: 3em;
+  }
+
+  .header__title_subtext {
+    font-size: 0.8em;
+  }
+
+  .contents__header {
+    height: 300px;
+  }
+
+  .contents__header_reverse {
+    height: 300px;
+  }
+
+  .contents__image {
+    height: 300px;
+  }
+
+  .contents__image_two {
+    height: 300px;
+  }
+
+  /*homes.sccs*/
+  .contents__commentary {
+    width: 95%;
+    font-size: 0.9em;
+  }
+
+  .contents__criterion {
+    width: 95%;
+    font-size: 0.9em;
+  }
+
+  .rooms {
+    width: 95%;
+    font-size: 0.9em;
+  }
+
+  .rooms__text_title {
+    font-size: 2em;
+  }
+
+  .rooms__text_cite {
+    color: #fff;
+    font-size: 1.5em;
+  }
+
+  /*users.scss*/
+  .user {
+    width: 95%;
+    font-size: 0.9em;
+  }
+
+  .icon__body {
+    width: 100px;
+    height: 100px;
+
+  }
+
+  .icon__body_mypage {
+    width: 200px;
+    height: 200px;
+
+  }
+
+  .user__textbox_body {
+    width: 80%;
+  }
+  .user__textbox_bigbody {
+    width: 80%;
+  }
+
+  .form {
+    margin: 0 auto;
+    width: 95%;
+  }
+
+  /*rooms.scss*/
+  .room__messages_container {
+    min-height: 267px;
+  }
+
   .room__header_name {
     overflow: hidden;
     white-space: nowrap;
