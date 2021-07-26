@@ -11,9 +11,13 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
 
   #アカウント管理機能
-
   def active_for_authentication?
       super && (self.user_status === true)
   end
-  
+
+  def receive_favarites_count
+    messeage_ids = self.messages.ids
+    Favorite.where(message_id: messeage_ids).count
+  end
+
 end

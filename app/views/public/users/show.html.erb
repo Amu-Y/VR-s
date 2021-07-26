@@ -9,7 +9,7 @@
         <div>
           <%= attachment_image_tag @user, :icon, :fill, 200, 200, format: 'jpeg', fallback: "no_image.jpg", class: "icon__body_mypage" %>
         </div>
-        <%= @user.favorites.count %>
+        <%= @user.receive_favarites_count %>
         <h4>
           name
           </h4>
