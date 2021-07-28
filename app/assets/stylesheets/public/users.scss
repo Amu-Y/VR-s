@@ -28,6 +28,26 @@
   border-radius: 50%;
 }
 
+.user__favarites {
+	display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.user__favarites_text{
+	font-size: 2em;
+  font-weight: 600;
+  display: inline-block;
+  padding: 5px 15px;
+  color: #f16272;
+  background: #fff;
+  border: 7px solid #f16272;
+  object-fit: cover;
+  border-radius: 45%;
+  cursor: default;
+}
+
+
 // 入力フォーム
 .user__textbox {
 	text-align: left;

@@ -4,7 +4,7 @@
       <%= @room.genre.name %>:<%= @room.name %>
       </b>
   </div>
-    <div id="display"><%= render 'public/rooms/messages', messages: @messages %></div>
+    <div id="display_<%= @room.id %>"><%= render 'public/rooms/messages', messages: @messages %></div>
 </div>
   <!-- テキストボックス、送信ボタン④ -->
   <%= form_with model: [@message] do |f| %>

@@ -3,13 +3,24 @@
 </header>
 <article class="user">
   <section class="user__content">
+
     <h1>
       User page
       </h1>
         <div>
           <%= attachment_image_tag @user, :icon, :fill, 200, 200, format: 'jpeg', fallback: "no_image.jpg", class: "icon__body_mypage" %>
         </div>
-        <%= @user.receive_favarites_count %>
+        <div class="user__favarites">
+          <div class="user__favarites_text">
+            <i class="fas fa-heart"></i><%= @user.receive_favarites_count %>
+          </div>
+          <div class="question">
+            <div class="question__icon"><i class="fas fa-question-circle"></i></div>
+              <div class="question__text">
+                いいね数
+              </div>
+          </div>
+        </div>
         <h4>
           name
           </h4>
