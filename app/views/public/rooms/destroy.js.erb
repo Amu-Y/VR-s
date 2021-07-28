@@ -1,1 +1,1 @@
-$("#display").html("<%= j(render 'public/rooms/messages', messages: @messages) %>");
+$("#display_<%= @room.id %>").html("<%= j(render 'public/rooms/messages', messages: @messages) %>");

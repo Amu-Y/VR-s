@@ -1,9 +1,10 @@
 class Public::MessagesController < ApplicationController
 
   def create
-    @messages = Message.all
+    @room = Room.find(params[:message][:room_id])
+    @messages = @room.messages
     if user_signed_in?
-      @message = Message.new(message_params)
+      @message = current_user.messages.new(message_params)
       @message.user_id = current_user.id
       if @message.save
          respond_to do |format|
@@ -24,6 +25,10 @@ class Public::MessagesController < ApplicationController
     @messages = Message.all
     @message = Message.find(params[:id])
     @message.destroy
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.js { render "public/rooms/destroy" }
+    end
   end
 
   private

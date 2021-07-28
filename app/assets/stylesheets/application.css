@@ -28,8 +28,6 @@ input {
   border-radius: 0;
 }
 
-
-
 .all {
   background: #1D6BDE;
 }
@@ -62,6 +60,7 @@ input {
 
   .menu__icon {
     background: rgba(38, 38, 38, 0);
+
   }
 
   .menu__icon_list {
@@ -277,10 +276,6 @@ input {
   }
 
   /*rooms.scss*/
-  .room__messages_container {
-    min-height: 267px;
-  }
-
   .room__header_name {
     overflow: hidden;
     white-space: nowrap;
