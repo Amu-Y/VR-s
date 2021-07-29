@@ -11,6 +11,7 @@
       <%  @informations.each do |information|%>
       <h3><%= link_to information.name, information_path(information.id), class: "informations__contents_link" %></h3>
       <% end %>
+      <%= paginate @informations %>
     </div>
   </section>
 </article>

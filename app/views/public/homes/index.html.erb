@@ -6,18 +6,26 @@
     <h3 class="contents__commentary_title">
       「VR's」は、VRに興味のあるすべての人の為の情報交換や交流を持つ為のコミュニティサイトです！
     </h3>
+
+    <h4>
+      VR未経験の貴方へ
+      </h4>
+      <p>
+        このサイトでは興味はあるけどはじめの一歩を踏み出せない貴方の一助となる為に不安要素を削ぐ情報を用意しています。</br>
+        例えば、３D酔いが不安材料となっている方は<%= link_to "こちら", beginner_path, class: "contents__commentary_text" %>に実体験からのアドバイスを掲載しているので見てみると良いかもしれません。
+        </p>
+        <p>
+          勿論、気になるルームに直接お邪魔してVRの先輩に話を聞くのも全然アリだと思います！</br>
+          その場合は、<%= link_to "こちら", new_user_registration_path(current_user), class: "contents__commentary_text" %>から会員登録して下さい。登録していなくても閲覧はできますが自分から何かを発信することは出来ませんので注意して下さい。</p>
+
  </section>
 </article>
 <!--ルーム一覧、ルーム投稿画面-->
-<div class="contents__header_reverse">
-  <div class="contents__inner">
-      <div class =contents__image></div>
-  </div>
-</div>
-  <%= render 'public/homes/search', rooms: @rooms, q: @q %>
-<div class="contents__header">
-  <div class="contents__inner">
-      <div class =contents__image_two></div>
-  </div>
-</div>
-  <%= render 'public/homes/room', room: @room %>
+<header class="contents__header_reverse">
+  <div class =contents__image></div>
+  </header>
+    <%= render 'public/homes/search', rooms: @rooms, q: @q %>
+<header class="contents__header">
+  <div class =contents__image_two></div>
+  </header>
+    <%= render 'public/homes/room', room: @room %>

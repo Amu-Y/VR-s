@@ -179,6 +179,10 @@ input {
     width: 95%;
   }
 
+  /*informations.scss*/
+  .informations__contents_link {
+    font-size: 1em;
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -285,5 +289,10 @@ input {
   /*admin/user.scss*/
   .table__position {
     width: 95%;
+  }
+
+  /*informations.scss*/
+  .informations__contents_link {
+    font-size: 1em;
   }
 }

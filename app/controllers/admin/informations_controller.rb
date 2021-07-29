@@ -4,7 +4,7 @@ class Admin::InformationsController < ApplicationController
     if admin_signed_in?
       @information = Information.new(information_params)
       if @information.save
-        redirect_to information_path(@information.id)
+        redirect_to admin_information_path(@information.id)
       else
         render new
       end
@@ -34,12 +34,13 @@ class Admin::InformationsController < ApplicationController
   def update
     if admin_signed_in?
       @information = Information.find(params[:id])
-      if @information.update
-        redirect_to admin_informations_path
+      if @information.update(information_params)
+        redirect_to admin_information_path(@information.id)
       else
+        render edit
       end
     else
-      render edit
+      redirect_back(fallback_location: root_path)
     end
   end
 
@@ -52,6 +53,7 @@ class Admin::InformationsController < ApplicationController
         render edit
       end
     else
+      redirect_back(fallback_location: root_path)
     end
   end
 

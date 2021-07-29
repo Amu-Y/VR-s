@@ -1,0 +1,21 @@
+<header class="contents__header">
+  <%= render 'layouts/header' %>
+</header>
+<article class="informations">
+  <section class="informations__contents">
+    <div class="informations__contents_text">
+      <h2>information create</h2>
+      <%= form_with model: @information, url: admin_information_path, local:true do |f| %>
+        <div class="errors"><%= flash[:error] %></div>
+        <%= render 'layouts/error_messages', model: f.object %>
+          <%= f.text_field :name, placeholder: "タイトル", class: "user__textbox_body" %>
+          <%= f.text_area :body, placeholder: "本文", class: "user__textbox_bigbody" %>
+        <div class="botton__position">
+          <div class="button__panel">
+             <%= f.submit 'edit', data: { confirm: "これで投稿しますか？"}, class: "button" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </section>
+</article>
