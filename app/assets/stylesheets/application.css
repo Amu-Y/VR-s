@@ -49,10 +49,6 @@ input {
     margin-left: 0px
   }
 
-  br {
-    display:none
-  }
-
   /*manu.scss*/
   .menu {
     top: 45px;
