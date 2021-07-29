@@ -34,13 +34,6 @@
                 <%= attachment_image_tag m, :image, format: 'jpeg', size: "100x100" %></br>
                 <% if user_signed_in? %>
                   <span id="favorite-btn_<%= m.id %>"><%= render 'public/favorites/favorite-btn', m: m %></span>
-                <% elsif admin_signed_in? %>
-                  <span><i class="fas fa-heart"></i><%= m.favorites.count %></span>
-                  <div>
-                    <% link_to message_path, method: :delete, data: { confirm: "このメッセージを削除しますか？"} do %>
-                      <i class="fas fa-trash-alt"></i>
-                    <% end %>
-                  </div>
                 <% else %>
                   <span><i class="fas fa-heart"></i><%= m.favorites.count %></span>
                 <% end %>

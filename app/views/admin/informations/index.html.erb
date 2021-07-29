@@ -1,0 +1,22 @@
+<header class="contents__header">
+  <%= render 'layouts/header' %>
+</header>
+<article class="informations">
+  <section class="informations__contents">
+    <div class="informations__contents_text">
+      <%= link_to "新しい記事を書く", new_admin_information_path, class: "informations__contents_link" %>
+      <h2>information list</h2>
+          <%= search_form_for @q, url: admin_informations_path do |f| %>
+            <div class="search">
+              <%= f.search_field :name_cont, class: "search__box" %>
+              <%= button_tag type: 'f.submit', class: "search__button" do %>
+              <i class="fas fa-search"></i>
+              <% end %>
+            </div>
+          <% end %>
+      <%  @informations.each do |information|%>
+      <h3><%= link_to information.name, information_path(information.id), class: "informations__contents_link" %></h3>
+      <% end %>
+    </div>
+  </section>
+</article>

@@ -1,6 +1,7 @@
 class Public::MessagesController < ApplicationController
 
   def create
+    
     @room = Room.find(params[:message][:room_id])
     @messages = @room.messages
     if user_signed_in?
