@@ -12,11 +12,13 @@ Rails.application.routes.draw do
     #チャット機能
     resources :rooms, only: [:create, :show, :index]
     resources :messages, only: [:create, :destroy] do
-      resource :favorites, only: [:create, :destroy]
+      resources :favorites, only: [:create, :destroy]
     end
-
-    # 検索機能
+    #検索機能
     resources :homes, only: [:index]
+    #情報機能
+    resources :informations, ony:[:index, :show]
+    get 'beginner' => 'informations#beginner'
   end
 
   #管理者側ルーティング
@@ -25,13 +27,11 @@ Rails.application.routes.draw do
   }
 
    namespace :admin do
-
+    #ユーザー、ルーム、ジャンル、情報管理
     resources :users, ony:[:index, :update]
     resources :rooms, only:[:index, :edit, :update, :destroy]
     resources :genres, only:[:index, :edit, :create, :update]
-
+    resources :informations
    end
-
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
 end

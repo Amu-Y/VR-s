@@ -1,0 +1,50 @@
+// Place all the styles related to the public::informations controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.informations {
+  margin: 10px 0;
+}
+
+.informations__contents {
+  margin: 0 auto;
+  width: 80%;
+  padding: 100px 30px;
+  overflow: hidden;
+  text-align: center;
+  // background-color: rgba(255,255,255,0.9);
+  background-image: image-url('letter.jpg');
+  box-shadow: 0px 10px 10px 5px rgba(0,0,0,0.3);
+}
+
+.informations__contents_title,
+.informations__contents_text,
+.informations__contents_link,
+.informations__contents_manu {
+  text-align: center;
+  color: #333333;
+  font-family: "YuGothic M";
+  src: local("Yu Gothic Medium"),
+       local("Yu Gothic");
+  font-weight: 500;
+}
+
+.informations__contents_title {
+  display:inline-block;
+  border-bottom: solid 2.5px rgba(40,40,40,0.1);
+}
+
+.informations__contents_text {
+ padding: 20px 0;
+}
+
+.informations__contents_text span {
+  text-decoration-line: line-through;
+}
+
+.informations__contents_link {
+  margin: 30px 0;
+  font-size: 2em;
+  text-decoration: none;
+  border-bottom: solid 2.5px rgba(40,40,40,0.1);
+}

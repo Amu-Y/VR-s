@@ -3,7 +3,17 @@
 </header>
 <article class="user">
   <section class="user__content">
-
+    <% if @user == current_user %>
+      <h4>
+        早々に好きな部屋を探したい貴方へ
+      </h4>
+        <p><%= link_to "こちら", rooms_path, class: "user__content_link" %>でルームを探しましょう！</p>
+      <h4>
+        自分が何者か明確に出来る貴方へ
+      </h4>
+      <p><%= link_to "こちら", edit_user_path(@user), class: "user__content_link" %>でプロフィールを編集しましょう！</p>
+    <% else %>
+    <% end %>
     <h1>
       User page
       </h1>
@@ -14,12 +24,6 @@
           <div class="user__favarites_text">
             <i class="fas fa-heart"></i><%= @user.receive_favarites_count %>
           </div>
-          <div class="question">
-            <div class="question__icon"><i class="fas fa-question-circle"></i></div>
-              <div class="question__text">
-                いいね数
-              </div>
-          </div>
         </div>
         <h4>
           name
@@ -29,11 +33,6 @@
           introduction
           </h4>
           <p><%= @user.introduction %></p>
-        <div>
-          <% if user_signed_in? %>
-          <%= link_to "edit", edit_user_path(@user) %>
-          <% else %>
-          <% end %>
-        </div>
+
   </section>
 </article>

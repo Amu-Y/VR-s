@@ -24,7 +24,7 @@
             <tbody>
               <% @rooms.each do |room| %>
               <tr>
-                <td><%= link_to room.name, room_path(room.id) %></td>
+                <td><%= link_to room.name, room_path(room.id), class: "table__text" %></td>
                 <td>
                   <% if room.room_status == true %>
                     <span><%= link_to "有効", admin_room_path(room), method: :patch, class: "table__status" %></span>

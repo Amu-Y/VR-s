@@ -1,0 +1,17 @@
+<header class="contents__header">
+  <%= render 'layouts/header' %>
+</header>
+<article class="informations">
+  <section class="informations__contents">
+    <div class="informations__contents_text">
+      <h2>information list</h2>
+        <p>
+        ここでは私が仕入れたネタを共有したり、オススメのコンテンツを紹介したりするので煮るなり焼くなり話の種にするなりして下さい！</p>
+      <%= link_to "VRを始めたいけど3D酔いしやすくて不安な貴方へ", beginner_path, class: "informations__contents_link" %>
+      <%  @informations.each do |information|%>
+      <h3><%= link_to information.name, information_path(information.id), class: "informations__contents_link" %></h3>
+      <% end %>
+      <%= paginate @informations %>
+    </div>
+  </section>
+</article>

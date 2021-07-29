@@ -1,21 +1,18 @@
-<div class="contents__header_reverse">
-  <div class="contents__inner">
-      <div class =contents__image></div>
-  </div>
-</div>
 <article class="rooms">
   <section class="rooms__text">
     <h1 class="rooms__text_title">
       Room list
       </h1>
-      <p>では早速VR友作りの為にルームを作成……の前に、まずは同じ事を語りたい人が既に存在するルームが無いか確認しましょう！
-      </p>
-      <p>ルーム利用のルール</br>
-        ・１つの議題につきワンルームが基本です。</br>
-        ・ルーム名は、他の人が分かりやすいようにソフトのタイトル、又は企業名として下さい。</br>
-        ・他の人と仲良くする気のない子はそもそも参加してはいけません、ここはVR友を作る場です。</br>
-        ・ルールを守って楽しくチャット。
-        </p>
+      <h3>
+        では早速VR友作りの為にルームを作成……の前に、まずは同じ事を語りたい人が既に存在するルームが無いか確認しましょう！
+        </h3>
+        <h4>
+          ルーム利用のルール
+          </h4>
+            <p>・１つの議題につきワンルームが基本です。</p>
+            <p>・ルーム名は、他の人が分かりやすいようにソフトのタイトル、又は企業名として下さい。</p>
+            <p>・他の人と仲良くする気のない子はそもそも参加してはいけません、ここはVR友を作る場です。</p>
+            <p>・ルールを守って楽しくチャット。</p>
           <%= search_form_for q, url: rooms_path do |f| %>
             <div class="search">
               <%= f.search_field :name_cont, class: "search__box" %>

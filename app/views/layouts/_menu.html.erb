@@ -1,29 +1,28 @@
 <nav class="menu">
   <% if user_signed_in? %>
+  <!--ユーザーメニュー-->
   <div class="menu__icon">
     <ul>
       <li class="menu__icon_list">
-        <%= link_to root_path, class: "menu__icon_link" do  %>
+        <%= link_to root_path, class: "menu__icon_link" do %>
           <i class="fas fa-home "></i>
         <% end %></li>
       <li class="menu__icon_list">
-        <%= link_to about_path, class: "menu__icon_link" do  %>
+        <%= link_to about_path, class: "menu__icon_link" do %>
           <i class="fas fa-globe-americas"></i>
         <% end %></li>
       <li class="menu__icon_list">
-        <%= link_to user_path(current_user), class: "menu__icon_link" do  %>
+        <%= link_to user_path(current_user), class: "menu__icon_link" do %>
           <i class="fas fa-user"></i>
         <% end %></li>
       <li class="menu__icon_list">
-        <%= link_to destroy_user_session_path, method: :delete, class: "menu__icon_link" do  %>
+        <%= link_to destroy_user_session_path, method: :delete, class: "menu__icon_link" do %>
           <i class="fas fa-sign-out-alt"></i>
         <% end %></li>
-      <!--<li class="menu__icon_list">-->
-      <!--  <a class="menu__icon_link">-->
-      <!--    <i class="far fa-sticky-note"></i></a></li>-->
-      <!--<li class="menu__icon_list">-->
-      <!--  <a class="menu__icon_link">-->
-      <!--    <i class="fas fa-bullhorn"></i></a></li>-->
+      <li class="menu__icon_list">
+        <%= link_to informations_path, class: "menu__icon_link" do %>
+          <i class="far fa-sticky-note"></i>
+        <% end %></li>
     </ul>
   </div>
   <div class="menu__text">
@@ -35,19 +34,17 @@
         <%= link_to "About", about_path, class: "menu__text_link" %>
         </li>
       <li class="menu__text_list">
-        <%= link_to "My page", user_path(current_user), class: "menu__text_link"  %>
+        <%= link_to "My page", user_path(current_user), class: "menu__text_link" %>
         </li>
       <li class="menu__text_list">
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "menu__text_link"  %>
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "menu__text_link" %>
         </li>
-      <!--<li class="menu__text_list">-->
-      <!--  <a class="menu__text_link" href="#" >-->
-      <!--    Information</a></li>-->
-      <!--<li class="menu__text_list">-->
-      <!--  <a class="menu__text_link" href="#" >-->
-      <!--    Help</a></li>-->
+      <li class="menu__text_list">
+        <%= link_to "Information", informations_path, class: "menu__text_link" %>
+        </li>
   </div>
   <% elsif admin_signed_in? %>
+  <!--管理者メニュー-->
     <div class="menu__icon">
     <ul>
       <li class="menu__icon_list">
@@ -66,12 +63,10 @@
         <%= link_to destroy_admin_session_path, method: :delete, class: "menu__icon_link" do  %>
           <i class="fas fa-sign-out-alt"></i>
         <% end %></li>
-      <!--<li class="menu__icon_list">-->
-      <!--  <a class="menu__icon_link">-->
-      <!--    <i class="far fa-sticky-note"></i></a></li>-->
-      <!--<li class="menu__icon_list">-->
-      <!--  <a class="menu__icon_link">-->
-      <!--    <i class="fas fa-bullhorn"></i></a></li>-->
+      <li class="menu__icon_list">
+        <%= link_to admin_informations_path, class: "menu__icon_link" do %>
+          <i class="far fa-sticky-note"></i>
+        <% end %></li>
     </ul>
   </div>
   <div class="menu__text">
@@ -88,15 +83,12 @@
       <li class="menu__text_list">
         <%= link_to "Logout", destroy_admin_session_path, method: :delete, class: "menu__text_link"  %>
         </li>
-      <!--<li class="menu__text_list">-->
-      <!--  <a class="menu__text_link" href="#" >-->
-      <!--    Information</a></li>-->
-      <!--<li class="menu__text_list">-->
-      <!--  <a class="menu__text_link" href="#" >-->
-      <!--    Help</a></li>-->
+      <li class="menu__text_list">
+        <%= link_to "Informations", admin_informations_path, class: "menu__text_link" %>
+        </li>
   </div>
   <% else %>
-  <!--未ログイン-->
+  <!--未ログインメニュー-->
   <div class="menu__icon">
     <ul>
       <li class="menu__icon_list">
@@ -114,12 +106,10 @@
         <%= link_to new_user_session_path, class: "menu__icon_link" do  %>
           <i class="fas fa-sign-in-alt"></i>
         <% end %></li>
-      <!--<li class="menu__icon_list">-->
-      <!--  <a class="menu__icon_link">-->
-      <!--    <i class="far fa-sticky-note"></i></a></li>-->
-      <!--<li class="menu__icon_list">-->
-      <!--  <a class="menu__icon_link">-->
-      <!--    <i class="fas fa-bullhorn"></i></a></li>-->
+      <li class="menu__icon_list">
+        <%= link_to informations_path, class: "menu__icon_link" do %>
+          <i class="far fa-sticky-note"></i>
+        <% end %></li>
     </ul>
   </div>
   <div  class="menu__text">
@@ -136,12 +126,9 @@
       <li class="menu__text_list">
         <%= link_to "Login", new_user_session_path, class: "menu__text_link" %>
         </li>
-      <!--<li class="menu__text_list">-->
-      <!--  <a class="menu__text_link" href="#" >-->
-      <!--    Information</a></li>-->
-      <!--<li class="menu__text_list">-->
-      <!--  <a class="menu__text_link" href="#" >-->
-      <!--    Help</a></li>-->
+      <li class="menu__text_list">
+        <%= link_to "Information", informations_path, class: "menu__text_link" %>
+        </li>
     </ul>
   </div>
   <% end %>

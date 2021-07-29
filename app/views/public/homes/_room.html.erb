@@ -1,26 +1,21 @@
-<div class="contents__header">
-  <div class="contents__inner">
-      <div class =contents__image_two></div>
-  </div>
-</div>
-  <article class="rooms">
-    <section class="rooms__text">
-      <h1 class="rooms__text_title">Room Create</h1>
-        <h4>語りたいタイトルが見つからなかった貴方へ</h4>
-          <p>自分が楽しいと思うものは、他の人にも楽しいと思って貰いたいですよね!</br>
-          ここでルームを作成してコンテンツのアピールをしながら同好の士を待ちましょう。</p>
-        <%= form_with model: [room], local:true do |f| %>
-          <div class="errors"><%= flash[:error] %></div>
-          <%= render 'layouts/error_messages', model: f.object %>
-        <div>
-          <%= f.text_field :name, placeholder: "未登録タイトル", class:"user__textbox_body" %>
-          <%= f.collection_select :genre_id, Genre.all, :id, :name, prompt: "--選択してください--", size: "30", class: "" %>
-        </div>
-          <div class="botton__position">
-            <div class="button__panel">
-               <%= f.submit 'Start', data: { confirm: "作成したルームは削除出来ません。カタカナ、またはアルファベットで同じタイトルが無いか確認しましたか？"}, class: "button" %>
-            </div>
+<article class="rooms">
+  <section class="rooms__text">
+    <h1 class="rooms__text_title">Room Create</h1>
+      <h4>語りたいタイトルが見つからなかった貴方へ</h4>
+        <p>自分が楽しいと思うものは、他の人にも楽しいと思って貰いたいですよね!</br>
+        ここでルームを作成してコンテンツのアピールをしながら同好の士を待ちましょう。</p>
+      <%= form_with model: [room], local:true do |f| %>
+        <div class="errors"><%= flash[:error] %></div>
+        <%= render 'layouts/error_messages', model: f.object %>
+      <div>
+        <%= f.text_field :name, placeholder: "未登録タイトル", class:"user__textbox_body" %>
+        <%= f.collection_select :genre_id, Genre.all, :id, :name, prompt: "--選択してください--", size: "30", class: "" %>
+      </div>
+        <div class="botton__position">
+          <div class="button__panel">
+             <%= f.submit 'Start', data: { confirm: "作成したルームは削除出来ません。カタカナ、またはアルファベットで同じタイトルが無いか確認しましたか？"}, class: "button" %>
           </div>
-        <% end %>
-    </section>
-  </article>
+        </div>
+      <% end %>
+  </section>
+</article>

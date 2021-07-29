@@ -13,6 +13,11 @@
   color: #fff;
 }
 
+.user__content_link {
+	color: #fff;
+}
+
+
 // アイコン
 .icon__body {
   width: 100px;
@@ -29,9 +34,7 @@
 }
 
 .user__favarites {
-	display: flex;
-  justify-content: center;
-  position: relative;
+  margin: 10px 0;
 }
 
 .user__favarites_text{
@@ -98,6 +101,7 @@
 	-moz-appearance: none;
 	-webkit-appearance: none;
 	appearance: none;
+	resize: vertical;
   height: 100px;
 }
 

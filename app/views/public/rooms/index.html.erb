@@ -1,2 +1,13 @@
-<%= render 'public/homes/search', rooms: @rooms, q: @q %>
-<%= render 'public/homes/room', room: @room, rooms: @rooms, q: @q %>
+<!--ルーム一覧、ルーム投稿画面-->
+<div class="contents__header_reverse">
+  <div class="contents__inner">
+      <div class =contents__image></div>
+  </div>
+</div>
+  <%= render 'public/homes/search', rooms: @rooms, q: @q %>
+<div class="contents__header">
+  <div class="contents__inner">
+      <div class =contents__image_two></div>
+  </div>
+</div>
+  <%= render 'public/homes/room', room: @room %>

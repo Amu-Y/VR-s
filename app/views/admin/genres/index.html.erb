@@ -25,7 +25,7 @@
               <% @genres.each do |genre| %>
               <tr>
                 <td><%= genre.name %></td>
-                <td><%= link_to edit_admin_genre_path(genre.id), class: "text-dark" do %><i class="fas fa-edit"></i><% end %></td>
+                <td><%= link_to  "編集",edit_admin_genre_path(genre.id), class: "table__text" %>
               </tr>
               <% end %>
             </tbody>
