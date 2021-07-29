@@ -1,6 +1,6 @@
 class Information < ApplicationRecord
   
-  validates :name, presence
-  validates :body, presence
+  validates :name, presence: true
+  validates :body, presence: true
   
 end
