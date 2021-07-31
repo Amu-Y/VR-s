@@ -23,11 +23,6 @@ main {
   margin-left: 72px
 }
 
-input {
-  -webkit-appearance: none;
-  border-radius: 0;
-}
-
 .all {
   background: #1D6BDE;
 }
@@ -47,6 +42,11 @@ input {
 
   main {
     margin-left: 0px
+  }
+  
+  input {
+    -webkit-appearance: none;
+    border-radius: 0;
   }
 
   /*manu.scss*/
@@ -182,6 +182,12 @@ input {
 }
 
 @media screen and (max-width:768px) {
+  
+  input {
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+  
   /*manu.scss*/
   .menu__info {
     display:none
