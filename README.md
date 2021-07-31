@@ -15,6 +15,16 @@
 
 ### 主な利用シーン
 　情報収集、友達作り
+ 
+### 仕様
+ ユーザー側のアドレス(新規作成可能)
+ email: jojo@test.com
+ password: password1
+
+ 管理者側のアドレス(新規作成不可)
+ email: admin@test.com
+ password: password
+ ※ユーザーと管理者への同時ログインは出来ません。
 
 ## 設計書
 - ER図
