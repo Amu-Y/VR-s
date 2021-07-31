@@ -24,6 +24,7 @@
  管理者側のアドレス(新規作成不可)
  email: admin@test.com
  password: password
+ 
  ※ユーザーと管理者への同時ログインは出来ません。
 
 ## 設計書
