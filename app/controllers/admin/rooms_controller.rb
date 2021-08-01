@@ -4,8 +4,8 @@ class Admin::RoomsController < ApplicationController
     @q = Room.ransack(params[:q])
     @rooms = @q.result(distinct: true).page(params[:page]).per(10)
   end
-  
-  def update 
+
+  def update
     @room = Room.find(params[:id])
     if admin_signed_in?
       if @room.room_status == true
@@ -13,13 +13,12 @@ class Admin::RoomsController < ApplicationController
       else
         @room.update(room_status: :true)
       end
-      reset_session
       redirect_to admin_rooms_path
     else
       redirect_to root_path
     end
   end
-  
+
 private
 
   def user_params
