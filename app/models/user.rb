@@ -15,6 +15,7 @@ class User < ApplicationRecord
       super && (self.user_status === true)
   end
 
+  #いいねカウント機能
   def receive_favarites_count
     messeage_ids = self.messages.ids
     Favorite.where(message_id: messeage_ids).count

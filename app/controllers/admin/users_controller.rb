@@ -13,7 +13,6 @@ class Admin::UsersController < ApplicationController
       else
         @user.update(user_status: :true)
       end
-      reset_session
       redirect_to admin_users_path
     else
       redirect_to root_path
