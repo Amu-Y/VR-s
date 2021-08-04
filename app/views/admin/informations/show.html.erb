@@ -11,6 +11,7 @@
             <%= raw Rinku.auto_link(simple_format (@information.body)) %>
             </p>
               <div>
+                <%= @information.score %>
                 <%= link_to "編集", edit_admin_information_path, class: "informations__contents_text" %>
                 <%= link_to "削除", admin_information_path(@information.id), method: :delete, data: { confirm: "削除しますか？"}, class: "informations__contents_text" %>
               </div>

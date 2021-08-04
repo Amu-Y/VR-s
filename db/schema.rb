@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2021_07_10_012843) do
     t.string "name"
     t.string "link"
     t.text "body"
+    t.decimal "score", precision: 5, scale: 3
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
