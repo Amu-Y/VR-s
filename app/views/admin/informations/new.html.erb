@@ -5,6 +5,8 @@
   <section class="informations__contents">
     <div class="informations__contents_text">
       <h2>information create</h2>
+        <h4>AIによる感情分析が実装されています</h4>
+          <p>1.0から-1.0の間で数値化された分析を元に、愚痴っぽくならないようポジティブな文面を心掛けましょう。</p>
       <%= form_with model: @information, url: admin_informations_path, local:true do |f| %>
         <div class="errors"><%= flash[:error] %></div>
         <%= render 'layouts/error_messages', model: f.object %>

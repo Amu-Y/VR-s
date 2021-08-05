@@ -1,5 +1,6 @@
 class Admin::InformationsController < ApplicationController
 
+
   def create
     if admin_signed_in?
       @information = Information.new(information_params)
